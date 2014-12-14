@@ -1,0 +1,58 @@
+<section id="filmography-post" class="default-padding">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-5 col-lg-4">
+        <div class="item">
+          <div class="hover">
+            <a href="{{assets}}/uploads/filmography-poster-{{slugify title}}.jpg">
+              <span class="block text-center">
+                <i class="fa fa-expand"></i>
+              </span>
+            </a>
+          </div>
+          <img src="{{assets}}/uploads/filmography-poster-{{slugify title}}.jpg" class="img-responsive" alt="">
+        </div>
+      </div>
+
+      <div class="details col-md-7 col-lg-8">
+        <h2>{{title}}</h2>
+
+        <div id="myTab" class="small-padding" role="tablist">
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="active" role="presentation">
+              <a href="#information" data-toggle="tab" role="tab">General Information</a>
+            </li>
+            <li role="presentation">
+              <a href="#synopsis" data-toggle="tab" role="tab">Synopsis</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div id="information" class="tab-pane active" role="tabpanel">
+              <dl class="dl-horizontal">
+                <dt>Also Known As</dt>
+                <dd>{{previoustitle}}</dd>
+                <dt>Chinese Title</dt>
+                <dd>{{chinesetitle}}</dd>
+                <dt>Broadcast Date</dt>
+                <dd>{{formatDate broadcaststart "%B %e, %Y"}} - {{formatDate broadcastend "%B %e, %Y"}}</dd>
+                <dt>Genre(s)</dt>
+                <dd>{{capitalizeEach genre}}</dd>
+                <dt>Running Time</dt>
+                <dd>{{episodes}} episodes</dd>
+                <dt>Produced by</dt>
+                <dd>{{producer}}</dd>
+              </dl>
+
+              <a class="btn btn-default" href="{{website}}">Official Website</a>
+            </div>
+            <div id="synopsis" class="tab-pane" role="tabpanel">
+              {{{synopsis}}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

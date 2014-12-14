@@ -1,0 +1,240 @@
+/*-----------------------------------------------------------------------------------*/
+/* SECTIONS
+/*-----------------------------------------------------------------------------------*/
+
+/*
+==============================
+
+  MASTHEAD
+
+==============================
+*/
+#masthead {
+  display: table;
+  width: 100%;
+  background: @black url('../images/header.jpg') no-repeat top center scroll;
+  background-size: cover;
+
+  .inner {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .box {
+    position: relative;
+    z-index: 2;
+  }
+
+  h1 { color: @white; }
+  p {
+    font-size: @font-size-small;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0 0 0 3px;
+    color: @white;
+  }
+  .line {
+    margin: 8px auto 18px;
+    width: 45px;
+    background-color: @white;
+  }
+
+  .btn-scroll {
+    position: absolute;
+    display: block;
+    left: 50%;
+    bottom: 12px;
+    margin-left: -16px;
+    z-index: 100;
+    color: @white;
+  }
+
+  &.welcome {
+    &, .overlay-pattern { height: 100%; }
+  }
+  &.page {
+    &, .overlay-pattern { height: 50%; }
+  }
+}
+
+@media(min-width: @screen-sm-min) {
+  #masthead {
+    h1 { font-size: @font-size-large - 5; }
+  }
+}
+
+/*
+==============================
+
+  MAIN
+
+==============================
+*/
+#main {
+  background-color: darken(@white, 5%);
+}
+
+/*
+==============================
+
+  FOOTER
+
+==============================
+*/
+footer .footer-copyright {
+  width: 100%;
+  padding: 50px 30px;
+  border-top: 1px solid #d8dadc;
+
+  letter-spacing: 3px;
+  font-size: @font-size-small;
+  text-transform: uppercase;
+
+  p { margin: 0; }
+}
+
+/*
+==============================
+
+  BACK TO TOP
+
+==============================
+*/
+#back-to-top {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: @black;
+  color: @white;
+  z-index: 99;
+  display: none;
+  transition: background .215s ease-in-out;
+
+  &:hover { background-color: @brand-primary; }
+
+  i {
+    font-size: @font-size-h1;
+    padding: 15px 20px 20px;
+    cursor: pointer;
+  }
+}
+
+/*
+==============================
+
+  ISOTOPE
+
+==============================
+*/
+/* ISOTOOPE */
+.isotope {
+  transition-property: height, width;
+
+  .isotope-item {
+    transition-property: transform, opacity;
+  }
+
+  &, .isotope-item {
+    transition-duration: 0.85s;
+  }
+}
+.isotope-item { z-index: 2; }
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+#isotope-grid {
+  h4 { font-size: @font-size-base; }
+  p {
+    font-size: @font-size-small;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .thumbnail:hover {
+    .hover { opacity: 1; }
+    .caption {
+      transition: background .5s ease-in-out;
+
+      background-color: @black;
+      color: @white;
+
+      a { color: @white; }
+    }
+  }
+}
+
+/*
+==============================
+
+  FILMOGRAPHY & VIDEO
+
+==============================
+*/
+#filmography-post {
+  .img-responsive { width: 100%; }
+}
+
+@media(min-width: @screen-md-min) {
+  #call-to-action {
+    h3 { margin-top: 11px; }
+    .btn { float: right; }
+  }
+
+  #video-post, #filmography-post {
+    .details {
+      padding-left: 40px;
+
+      h2 { margin-top: 0; }
+    }
+  }
+}
+
+/*
+==============================
+
+  INTRO
+
+==============================
+*/
+@media(max-width: @screen-xs-max) {
+  #intro {
+    h2 { font-size: @font-size-h4; }
+  }
+}
+
+
+/*
+==============================
+
+  INSTAFEED
+
+==============================
+*/
+
+#instafeed .item {
+  padding-left: 0;
+  padding-right: 0;
+
+  h3, h4 {
+    color: @white;
+    font-weight: 400;
+    margin: 0 0 0 3px;
+  }
+  h3 { font-size: @font-size-base - 2; }
+  h4 { font-size: @font-size-small; }
+
+  .line { background-color: @white; }
+}
+
+@media(max-width: @screen-xs-max) {
+  #instafeed .item {
+    h4 { font-size: @font-size-base; }
+  }
+}
+
+@media(min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+  #instafeed .item {
+    &:last-child { display: none; }
+  }
+}

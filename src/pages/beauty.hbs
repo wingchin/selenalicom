@@ -1,0 +1,35 @@
+---
+title:      <%= site.beauty.title %>
+subtitle:   <%= site.beauty.subtitle %>
+---
+
+{{> call-to-action}}
+
+<section id="isotope-grid" class="default-padding">
+  <div class="container">
+    <div class="row">
+
+      {{#each beauty}}
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <figure class="thumbnail">
+          <div class="item">
+            <div class="hover">
+              <a href="beauty/{{slugify title}}.html">
+                <span class="block text-center">
+                  <i class="fa fa-plus"></i>
+                </span>
+              </a>
+            </div>
+            <img src="assets/uploads/beauty-video-{{slugify title}}.jpg" class="img-responsive" alt="">
+          </div>
+          <figcaption class="caption">
+            <h4><a href="beauty/{{slugify title}}.html">{{title}}</a></h4>
+            <p>{{formatDate date "%B %e, %Y"}}</p>
+          </figcaption>
+        </figure>
+      </div>
+      {{/each}}
+
+    </div>
+  </div>
+</section>
