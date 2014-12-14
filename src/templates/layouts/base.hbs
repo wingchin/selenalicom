@@ -66,42 +66,7 @@
     </header>
 
 
-    {{!-- masthead
-    =================================== --}}
-    <div id="masthead" class="{{#is basename "index"}}welcome{{else}}page{{/is}}">
-      <span class="overlay-pattern"></span>
-      <div class="inner">
-        <div class="box container text-center">
-          {{#is dirname "build/filmography"}}
-            <h1>{{site.filmography.title}}</h1>
-            <span class="line"></span>
-            <p>{{site.filmography.subtitle}}</p>
-          {{else}}
-            {{#is dirname "build/beauty"}}
-              <h1>{{site.beauty.title}}</h1>
-              <span class="line"></span>
-              <p>{{site.beauty.subtitle}}</p>
-            {{else}}
-              <h1>{{title}}</h1>
-              <span class="line"></span>
-              <p>{{subtitle}}</p>
-            {{/is}}
-          {{/is}}
-        </div>
-      </div>
-      {{#is basename "index"}}
-      <a href="#main" class="btn-scroll">
-        <i class="fa fa-angle-down animated"></i>
-      </a>
-      {{/is}}
-    </div>
-
-
-    {{!-- content
-    =================================== --}}
-    <main id="main">
-      {{> body }}
-    </main>
+    {{> body }}
 
 
     {{!-- footer
