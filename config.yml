@@ -1,0 +1,35 @@
+# =============================================
+# Build config
+# =============================================
+
+src:              src
+build:            build
+
+# Templates
+templates:        <%= site.src %>/templates
+layouts:          <%= site.templates %>/layouts
+partials:         <%= site.templates %>/partials
+pages:            <%= site.src %>/pages
+
+# Data
+data:             <%= site.src %>/data
+
+# =============================================
+# Site metadata
+# =============================================
+
+title:            Selena Li Official Website
+description:      Actress / Host / Enterpreneur / Beauty Guru
+url:              http://selena-li.com
+copyright:        2006-2014
+
+# Areas
+filmography:
+  title:          Filmography
+  subtitle:       Television dramas and movies
+beauty:
+  title:          Beauty
+  subtitle:       Make-up tips and tricks
+
+# Social media
+youtube:          selenabeautytips
