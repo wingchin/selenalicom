@@ -40,7 +40,7 @@
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
               <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand" href="{{relative page.dest "build"}}/index.html">
+            <a class="navbar-brand" href="{{relative page.dest "index.html"}}">
               <img src="{{assets}}/images/logo-dark.png" class="logo-dark" alt="Selena-Li.com" />
               <img src="{{assets}}/images/logo-white.png" class="logo-white" alt="Selena-Li.com" />
             </a>
@@ -50,13 +50,13 @@
           <div class="collapse navbar-collapse navbar-right">
             <ul class="nav navbar-nav">
               <li{{#is basename 'about'}} class="active"{{/is}}>
-                <a href="{{relative page.dest "build"}}/about.html">About Selena</a>
+                <a href="{{relative page.dest "about.html"}}">About Selena</a>
               </li>
               <li{{#is basename 'filmography'}} class="active"{{/is}}{{#is dirname "build/filmography"}} class="active"{{/is}}>
-                <a href="{{relative page.dest "build"}}/filmography.html">Filmography</a>
+                <a href="{{relative page.dest "filmography.html"}}">Filmography</a>
               </li>
               <li{{#is basename 'beauty'}} class="active"{{/is}}{{#is dirname "build/beauty"}} class="active"{{/is}}>
-                <a href="{{relative page.dest "build"}}/beauty.html">Beauty</a>
+                <a href="{{relative page.dest "beauty.html"}}">Beauty</a>
               </li>
             </ul>
           </div>
