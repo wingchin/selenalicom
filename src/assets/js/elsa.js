@@ -127,11 +127,17 @@ if ($('#instafeed').length) {
 ==============================
 */
 if ($('#isotope-grid').length) {
-  $('#isotope-grid .row').isotope({
-    filter: '*',
-    layoutMode: 'fitRows',
-    sortAscending: false,
-    sortBy : 'original-order'
+  $(document).ready(function() {
+    var $container = $('#isotope-grid .row').isotope({
+      filter: '*',
+      layoutMode: 'fitRows',
+      sortAscending: false,
+      sortBy : 'original-order'
+    });
+
+    $container.imagesLoaded( function() {
+      $container.isotope('layout');
+    });
   });
 
   $('#filter a').click(function() {
@@ -139,13 +145,18 @@ if ($('#isotope-grid').length) {
     $(this).addClass('active');
 
     var selector = $(this).attr('data-filter');
-    $('#isotope-grid .row').isotope({
+    var $container = $('#isotope-grid .row').isotope({
       filter: selector,
       layoutMode: 'fitRows',
       sortAscending: false
     });
+    $container.imagesLoaded( function() {
+      $container.isotope('layout');
+    });
   });
 }
+
+
 
 /*
 ==============================
