@@ -127,16 +127,12 @@ if ($('#instafeed').length) {
 ==============================
 */
 if ($('#isotope-grid').length) {
-  $(document).ready(function() {
-    var $container = $('#isotope-grid .row').isotope({
+  var $container = $('#isotope-grid .row').imagesLoaded( function() {
+    $container.isotope({
       filter: '*',
       layoutMode: 'fitRows',
       sortAscending: false,
       sortBy : 'original-order'
-    });
-
-    $container.imagesLoaded( function() {
-      $container.isotope('layout');
     });
   });
 
@@ -145,26 +141,12 @@ if ($('#isotope-grid').length) {
     $(this).addClass('active');
 
     var selector = $(this).attr('data-filter');
-    var $container = $('#isotope-grid .row').isotope({
-      filter: selector,
-      layoutMode: 'fitRows',
-      sortAscending: false
-    });
-    $container.imagesLoaded( function() {
-      $container.isotope('layout');
+    var $container = $('#isotope-grid .row').imagesLoaded( function() {
+      $container.isotope({
+        filter: selector,
+        layoutMode: 'fitRows',
+        sortAscending: false
+      });
     });
   });
-}
-
-
-
-/*
-==============================
-
-  MEDIAELEMENT
-
-==============================
-*/
-if ($('#video-post').length) {
-  $('video').mediaelementplayer();
 }
