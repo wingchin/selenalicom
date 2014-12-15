@@ -91,7 +91,7 @@ module.exports = function(grunt) {
         data:       '<%= site.data %>/*.{yml,json}',
         layoutdir:  '<%= site.layouts %>',
         partials:   '<%= site.partials %>/**/*.hbs',
-        layout:     'base.hbs',
+        layout:     'half.hbs',
         helpers:    ['handlebars-helper-*']
       },
 
@@ -120,11 +120,22 @@ module.exports = function(grunt) {
     connect: {
       build: {
         options: {
+          base: '<%= site.build %>',
           port: 8000,
           keepalive: true
         }
       }
     },
+
+    // Deploy to GitHub pages
+    'gh-pages': {
+      options: {
+        base: '<%= site.build %>',
+        branch: 'gh-pages',
+        repo: 'https://github.com/lizzychin/selenalicom.git'
+      },
+      src: ['**']
+    }
 
   });
 
@@ -136,6 +147,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('assemble');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-gh-pages');
 
   // Tasks when we type "grunt" into the terminal.
   grunt.registerTask('default', [ 'watch' ]);
