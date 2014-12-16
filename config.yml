@@ -32,8 +32,15 @@ beauty:
   subtitle:       Make-up tips and tricks
 
 # Social media
-facebook:         selenaliszewan
-instagram:        selenalisw
-youtube:          selenabeautytips
-weibo:            1731864915
-tencent:          selenaliszewan
+selena:
+  facebook:         selenaliszewan
+  instagram:        selenalisw
+  youtube:          selenabeautytips
+  weibo:            1731864915
+  tencent:          selenaliszewan
+fanclub:
+  twitter:          selenalicom
+  instagram:        selenaliofficial
+  vimeo:            selenalicom
+  weibo:            selenaliofficial
+  tencent:          selenaliofficial
