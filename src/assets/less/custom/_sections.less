@@ -80,16 +80,23 @@
 
 ==============================
 */
-footer .footer-copyright {
-  width: 100%;
+footer {
   padding: 50px 30px;
   border-top: 1px solid #d8dadc;
 
-  letter-spacing: 3px;
-  font-size: @font-size-small;
-  text-transform: uppercase;
+  p, ul.list-inline {
+    margin: 0;
+    padding: 0;
+  }
 
-  p { margin: 0; }
+  .copyright {
+    letter-spacing: 3px;
+    font-size: @font-size-small;
+    text-transform: uppercase;
+  }
+  .social-media {
+    text-align: right;
+  }
 }
 
 /*

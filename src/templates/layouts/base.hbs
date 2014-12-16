@@ -11,14 +11,6 @@
       {{#isnt basename "index"}}{{title}} &middot; {{/isnt}}{{site.title}}
     </title>
 
-    <!-- Custom Fonts -->
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:700|Raleway:300" rel="stylesheet">
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
-    {{#is dirname "build/beauty"}}
-      <link href="http://cdnjs.cloudflare.com/ajax/libs/mediaelement/2.13.2/css/mediaelementplayer.min.css" rel="stylesheet">
-    {{/is}}
-
     <!-- Custom CSS -->
     <link href="{{assets}}/css/elsa.min.css" rel="stylesheet">
 
@@ -40,7 +32,7 @@
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
               <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand" href="{{relative page.dest "index.html"}}">
+            <a class="navbar-brand" href="{{site.url}}">
               <img src="{{assets}}/images/logo-dark.png" class="logo-dark" alt="Selena-Li.com" />
               <img src="{{assets}}/images/logo-white.png" class="logo-white" alt="Selena-Li.com" />
             </a>
@@ -72,8 +64,21 @@
     {{!-- footer
     =================================== --}}
     <footer>
-      <div class="footer-copyright">
-        <p class="text-center">&copy; Copyright {{site.copyright}} <a href="{{site.url}}">{{site.title}}</a>.</p>
+      <div class="container">
+        <div class="row">
+          <div class="copyright col-sm-7">
+            <p>&copy; {{site.copyright}} <a href="{{site.url}}">{{site.title}}</a>.</p>
+          </div>
+          <div class="social-media col-sm-5">
+            <ul class="list-inline">
+              <li><a href="http://facebook.com/{{site.facebook}}" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="http://instagram.com/{{site.instagram}}" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="http://youtube.com/user/{{site.youtube}}" title="YouTube"><i class="fa fa-youtube"></i></a></li>
+              <li><a href="http://www.weibo.com/u/{{site.weibo}}" title="Sina Weibo"><i class="fa fa-weibo"></i></a></li>
+              <li><a href="http://t.qq.com/{{site.tencent}}" title="Tencent Weibo"><i class="fa fa-tencent-weibo"></i></a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </footer>
 
