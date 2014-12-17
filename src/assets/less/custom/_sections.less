@@ -55,10 +55,14 @@
     &, .overlay-pattern { height: 50%; }
   }
 }
-
 @media(min-width: @screen-sm-min) {
   #masthead {
     h1 { font-size: @font-size-large - 5; }
+  }
+}
+@media(max-height: 479px) {
+  #masthead.half {
+    &, .overlay-pattern { height: 100%; }
   }
 }
 
