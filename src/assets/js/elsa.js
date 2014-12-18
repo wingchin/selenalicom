@@ -130,9 +130,7 @@ if ($('#isotope-grid').length) {
   var $container = $('#isotope-grid .row').imagesLoaded( function() {
     $container.isotope({
       filter: '*',
-      layoutMode: 'fitRows',
-      sortAscending: false,
-      sortBy : 'original-order'
+      layoutMode: 'fitRows'
     });
   });
 
@@ -144,8 +142,7 @@ if ($('#isotope-grid').length) {
     var $container = $('#isotope-grid .row').imagesLoaded( function() {
       $container.isotope({
         filter: selector,
-        layoutMode: 'fitRows',
-        sortAscending: false
+        layoutMode: 'fitRows'
       });
     });
   });

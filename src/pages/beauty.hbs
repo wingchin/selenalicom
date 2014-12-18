@@ -9,7 +9,7 @@ subtitle:   <%= site.beauty.subtitle %>
   <div class="container">
     <div class="row">
 
-      {{#each beauty}}
+      {{#withSort beauty "date" dir="desc"}}
       <div class="col-xs-12 col-sm-6 col-md-4">
         <figure class="thumbnail">
           <div class="item">
@@ -28,7 +28,7 @@ subtitle:   <%= site.beauty.subtitle %>
           </figcaption>
         </figure>
       </div>
-      {{/each}}
+      {{/withSort}}
 
     </div>
   </div>
