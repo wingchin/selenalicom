@@ -1,3 +1,8 @@
+---
+isotope:
+  - filmography
+  - beauty
+---
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -106,14 +111,10 @@
     {{#is basename "index"}}
       <script src="{{assets}}/js/plugins/instafeed.min.js"></script>
     {{/is}}
-    {{#is basename "filmography"}}
+    {{#inArray isotope basename}}
       <script src="{{assets}}/js/plugins/isotope.min.js"></script>
       <script src="{{assets}}/js/plugins/imagesloaded.min.js"></script>
-    {{/is}}
-    {{#is basename "beauty"}}
-      <script src="{{assets}}/js/plugins/isotope.min.js"></script>
-      <script src="{{assets}}/js/plugins/imagesloaded.min.js"></script>
-    {{/is}}
+    {{/inArray}}
 
     <script src="{{assets}}/js/elsa.min.js"></script>
 
