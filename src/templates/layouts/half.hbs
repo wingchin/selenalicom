@@ -17,9 +17,15 @@ layout: base.hbs
           <span class="line"></span>
           <p>{{site.beauty.subtitle}}</p>
         {{else}}
-          <h1>{{title}}</h1>
-          <span class="line"></span>
-          <p>{{subtitle}}</p>
+          {{#is dirname "build/schedule"}}
+            <h1>{{site.schedule.title}}</h1>
+            <span class="line"></span>
+            <p>{{site.schedule.subtitle}}</p>
+          {{else}}
+            <h1>{{title}}</h1>
+            <span class="line"></span>
+            <p>{{subtitle}}</p>
+          {{/is}}
         {{/is}}
       {{/is}}
     </div>

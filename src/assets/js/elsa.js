@@ -110,7 +110,6 @@ if ($('#instafeed').length) {
               '</figure>',
     get: 'user',
     userId: 221786646,
-    //sortBy: 'random',
     limit: 4,
     resolution: 'standard_resolution'
   });
@@ -146,4 +145,66 @@ if ($('#isotope-grid').length) {
       });
     });
   });
+}
+
+/*
+==============================
+
+  GOOGLE MAPS
+  http://www.labnol.org/internet/embed-google-maps-background/28457/
+
+==============================
+*/
+if ($('#map').length) {
+  function showGoogleMaps() {
+    var latLng = new google.maps.LatLng(position[0], position[1]);
+
+    // Basic options for a simple Google Map
+    var mapOptions = {
+      zoom: 12,
+      center: latLng,
+
+      // Disables the default Google Maps UI components
+      disableDefaultUI: true,
+
+      // Styles from Snazzy Maps
+      // https://snazzymaps.com/style/19/subtle
+      styles: [
+        {
+          "stylers": [{ "saturation": -70 }, { "lightness": 37 }, { "gamma": 1.15 }]
+        },
+        {
+          "featureType": "poi",
+          "stylers": [{ "visibility": "off" }]
+        },
+        {
+          "featureType": "road.arterial",
+          "elementType": "geometry",
+          "stylers": [{ "lightness": 10 }]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "geometry",
+          "stylers": [{ "lightness": 50 }, { "saturation": 20 }, { "hue": "#ffffff" }]
+        }
+      ]
+    };
+
+    // Create the Google Map using our element and options defined above
+    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+    // Show the marker at the location
+    var pinImage = new google.maps.MarkerImage(
+      "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|cccccc"
+    );
+
+    var marker = new google.maps.Marker({
+      position: latLng,
+      map: map,
+      icon: pinImage,
+    });
+  }
+
+  // When the window has finished loading create our google map below
+  google.maps.event.addDomListener(window, 'load', showGoogleMaps);
 }

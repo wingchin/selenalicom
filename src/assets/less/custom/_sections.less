@@ -213,6 +213,7 @@ footer {
     letter-spacing: 1px;
     text-transform: uppercase;
   }
+  i { padding-right: 3px; }
 
   .thumbnail:hover {
     .hover { opacity: 1; }
@@ -226,16 +227,32 @@ footer {
     }
   }
 }
+.schedule #isotope-grid {
+  .thumbnail { padding:10px 20px; }
+}
 
 /*
 ==============================
 
-  FILMOGRAPHY & VIDEO
+  AREAS
 
 ==============================
 */
 #filmography-post {
   .img-responsive { width: 100%; }
+}
+#event-post {
+  .dl-horizontal {
+    margin: 0;
+
+    dt { width: 115px; }
+    i { width: 15px; }
+  }
+
+  #map {
+    width: 100%;
+    height: 600px;
+  }
 }
 
 @media(min-width: @screen-md-min) {
@@ -244,12 +261,15 @@ footer {
     .btn { float: right; }
   }
 
-  #video-post, #filmography-post {
+  #video-post, #filmography-post, #event-post {
     .details {
       padding-left: 40px;
 
       h2 { margin-top: 0; }
     }
+  }
+  #event-post {
+    .details { padding-right: 40px; }
   }
 }
 

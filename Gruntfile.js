@@ -113,6 +113,13 @@ module.exports = function(grunt) {
         },
         src: '!*',
         dest: '<%= site.build %>/beauty/'
+      },
+      schedule: {
+        options: {
+          pages: pages('schedule')
+        },
+        src: '!*',
+        dest: '<%= site.build %>/schedule/'
       }
     },
 

@@ -1,8 +1,3 @@
----
-isotope:
-  - filmography
-  - beauty
----
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,7 +20,12 @@ isotope:
       <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+
+  {{#inArray site.isotope basename}}
+  <body class="{{basename}}">
+  {{else}}
   <body>
+  {{/inArray}}
     {{!-- header
     =================================== --}}
     <header>
@@ -54,6 +54,9 @@ isotope:
               <li{{#is basename 'beauty'}} class="active"{{/is}}{{#is dirname "build/beauty"}} class="active"{{/is}}>
                 <a href="{{relative page.dest "beauty.html"}}">Beauty</a>
               </li>
+              <li{{#is basename 'schedule'}} class="active"{{/is}}{{#is dirname "build/schedule"}} class="active"{{/is}}>
+                <a href="{{relative page.dest "schedule.html"}}">Schedule</a>
+              </li>
               <li{{#is basename 'contact'}} class="active"{{/is}}>
                 <a href="{{relative page.dest "contact.html"}}">Contact</a>
               </li>
@@ -74,7 +77,7 @@ isotope:
       <div class="container">
         <div class="row">
           <div class="copyright col-sm-7">
-            <p>&copy; {{site.copyright}} <a href="{{site.url}}">{{site.title}}</a>.</p>
+            <p>&copy; {{site.since}}-{{now "%Y"}} <a href="{{site.url}}">{{site.title}}</a>.</p>
           </div>
           <div class="social-media col-sm-5">
             <ul class="list-inline">
@@ -108,12 +111,19 @@ isotope:
     =================================== --}}
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-    {{#is basename "index"}}
+    {{#inArray site.instafeed basename}}
       <script src="{{assets}}/js/plugins/instafeed.min.js"></script>
-    {{/is}}
-    {{#inArray isotope basename}}
+    {{/inArray}}
+    {{#inArray site.isotope basename}}
       <script src="{{assets}}/js/plugins/isotope.min.js"></script>
       <script src="{{assets}}/js/plugins/imagesloaded.min.js"></script>
+    {{/inArray}}
+    {{#inArray site.maps dirname}}
+      <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+      <script type="text/javascript">
+         // The latitude and longitude of the location
+        var position = [{{map}}];
+      </script>
     {{/inArray}}
 
     <script src="{{assets}}/js/elsa.min.js"></script>
