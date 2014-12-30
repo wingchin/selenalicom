@@ -22,7 +22,7 @@ data:             <%= site.src %>/data
 title:            Selena Li Official Website
 description:      Actress / Host / Enterpreneur / Beauty Guru
 url:              http://selena-li.com
-since:            '2006'
+since:            2006
 
 # Site areas
 filmography:
@@ -34,16 +34,9 @@ beauty:
 schedule:
   title:          Schedule
   subtitle:       Functions and events
-
-# Plugins
-instafeed:
-                  - index
-isotope:
-                  - filmography
-                  - beauty
-                  - schedule
-maps:
-                  - build/schedule
+press:
+  title:          Press
+  subtitle:       News articles and interviews
 
 # Social media
 selena:
@@ -52,6 +45,7 @@ selena:
   youtube:        selenabeautytips
   weibo:          1731864915
   tencent:        selenaliszewan
+  gplus:          115423005237158779385
 fanclub:
   twitter:        selenalicom
   instagram:      selenaliofficial

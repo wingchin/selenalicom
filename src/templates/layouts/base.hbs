@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {{!-- head
+    {{!-- Head
     =================================== --}}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>
-      {{#isnt basename "index"}}{{title}} &middot; {{/isnt}}{{site.title}}
-    </title>
+    {{#block "title"}}
+    <title>{{title}} &middot; {{site.title}}</title>
+    {{/block}}
 
-    <!-- Custom CSS -->
     <link href="{{assets}}/css/elsa.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -21,12 +20,9 @@
     <![endif]-->
   </head>
 
-  {{#inArray site.isotope basename}}
-  <body class="{{basename}}">
-  {{else}}
   <body>
-  {{/inArray}}
-    {{!-- header
+
+    {{!-- Header
     =================================== --}}
     <header>
       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -48,13 +44,13 @@
               <li{{#is basename 'about'}} class="active"{{/is}}>
                 <a href="{{relative page.dest "about.html"}}">About Selena</a>
               </li>
-              <li{{#is basename 'filmography'}} class="active"{{/is}}{{#is dirname "build/filmography"}} class="active"{{/is}}>
+              <li{{#is basename 'filmography'}} class="active"{{/is}}>
                 <a href="{{relative page.dest "filmography.html"}}">Filmography</a>
               </li>
-              <li{{#is basename 'beauty'}} class="active"{{/is}}{{#is dirname "build/beauty"}} class="active"{{/is}}>
+              <li{{#is basename 'beauty'}} class="active"{{/is}}>
                 <a href="{{relative page.dest "beauty.html"}}">Beauty</a>
               </li>
-              <li{{#is basename 'schedule'}} class="active"{{/is}}{{#is dirname "build/schedule"}} class="active"{{/is}}>
+              <li{{#is basename 'schedule'}} class="active"{{/is}}>
                 <a href="{{relative page.dest "schedule.html"}}">Schedule</a>
               </li>
               <li{{#is basename 'contact'}} class="active"{{/is}}>
@@ -68,10 +64,37 @@
     </header>
 
 
-    {{> body }}
+    {{!-- Masthead
+    =================================== --}}
+    <section id="masthead"{{#if full}} class="full"{{/if}}>
+      {{#block "masthead"}}
+      <div class="inner">
+        <div class="container">
+          {{#is dirname "build"}}
+            <h1>{{title}}</h1>
+            <span class="line"></span>
+            <p>{{subtitle}}</p>
+          {{else}}
+            <h1>{{area.title}}</h1>
+            <span class="line"></span>
+            <p>{{area.subtitle}}</p>
+          {{/is}}
+        </div>
+      </div>
+      {{/block}}
+    </section>
 
 
-    {{!-- footer
+    {{!-- Content
+    =================================== --}}
+    <main id="main">
+      {{#block "body"}}
+        {{> body}}
+      {{/block}}
+    </main>
+
+
+    {{!-- Footer
     =================================== --}}
     <footer>
       <div class="container">
@@ -80,23 +103,7 @@
             <p>&copy; {{site.since}}-{{now "%Y"}} <a href="{{site.url}}">{{site.title}}</a>.</p>
           </div>
           <div class="social-media col-sm-5">
-            <ul class="list-inline">
-              <li>
-                <a href="http://facebook.com/{{site.selena.facebook}}" title="Selena Li's Facebook"><i class="fa fa-facebook"></i></a>
-              </li>
-              <li>
-                <a href="http://instagram.com/{{site.selena.instagram}}" title="Selena Li's Instagram"><i class="fa fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="http://youtube.com/user/{{site.selena.youtube}}" title="Selena Li's YouTube"><i class="fa fa-youtube"></i></a>
-              </li>
-              <li>
-                <a href="http://www.weibo.com/u/{{site.selena.weibo}}" title="Selena Li's Sina Weibo"><i class="fa fa-weibo"></i></a>
-              </li>
-              <li>
-                <a href="http://t.qq.com/{{site.selena.tencent}}" title="Selena Li's Tencent Weibo"><i class="fa fa-tencent-weibo"></i></a>
-              </li>
-            </ul>
+            {{> social-media}}
           </div>
         </div>
       </div>
@@ -107,26 +114,20 @@
     </a>
 
 
-    {{!-- foot
+    {{!-- Foot
     =================================== --}}
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-    {{#inArray site.instafeed basename}}
-      <script src="{{assets}}/js/plugins/instafeed.min.js"></script>
-    {{/inArray}}
-    {{#inArray site.isotope basename}}
-      <script src="{{assets}}/js/plugins/isotope.min.js"></script>
-      <script src="{{assets}}/js/plugins/imagesloaded.min.js"></script>
-    {{/inArray}}
-    {{#inArray site.maps dirname}}
-      <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-      <script type="text/javascript">
-         // The latitude and longitude of the location
-        var position = [{{map}}];
-      </script>
-    {{/inArray}}
-
-    <script src="{{assets}}/js/elsa.min.js"></script>
+    {{#block "script"}}
+      {{#is dirname "build/schedule"}}
+        <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <script type="text/javascript">
+           // The latitude and longitude of the location
+          var position = [{{map}}];
+        </script>
+      {{/is}}
+      <script src="{{assets}}/js/elsa.min.js"></script>
+    {{/block}}
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -137,5 +138,6 @@
       ga('create', 'UA-12048611-1', 'auto');
       ga('send', 'pageview');
     </script>
+
   </body>
 </html>

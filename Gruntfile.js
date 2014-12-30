@@ -11,13 +11,11 @@ module.exports = function(grunt) {
 
   function pages(area) {
     var data = 'src/data/' + area + '.yml';
-    var partial = 'src/templates/partials/' + area + '-post.hbs';
 
     return _.map(grunt.file.readYAML(data), function(n) {
       return {
         filename: _.str.slugify(n.title),
-        data: n,
-        content: grunt.file.read(partial)
+        data: n
       }
     })
   }
@@ -90,8 +88,11 @@ module.exports = function(grunt) {
         assets:     '<%= site.build %>/assets',
         data:       '<%= site.data %>/*.{yml,json}',
         layoutdir:  '<%= site.layouts %>',
-        partials:   '<%= site.partials %>/**/*.hbs',
-        layout:     'half.hbs',
+        partials:   [
+          '<%= site.partials %>/**/*.hbs',
+          '<%= site.layouts %>/**/*.hbs',
+        ],
+        layout:     'base.hbs',
         helpers:    ['handlebars-helper-*']
       },
 
@@ -102,24 +103,35 @@ module.exports = function(grunt) {
       },
       filmography: {
         options: {
-          pages: pages('filmography')
+          pages: pages('filmography'),
+          area: '<%= site.filmography %>',
+          layout: 'post-filmography.hbs'
         },
         src: '!*',
         dest: '<%= site.build %>/filmography/'
       },
       beauty: {
         options: {
-          pages: pages('beauty')
+          pages: pages('beauty'),
+          area: '<%= site.beauty %>',
+          layout: 'post-beauty.hbs'
         },
         src: '!*',
         dest: '<%= site.build %>/beauty/'
       },
       schedule: {
         options: {
-          pages: pages('schedule')
+          pages: pages('schedule'),
+          area: '<%= site.schedule %>',
+          layout: 'post-schedule.hbs'
         },
         src: '!*',
         dest: '<%= site.build %>/schedule/'
+      },
+      press: {
+        src: '<%= site.pages %>/press/*.md',
+        dest: '<%= site.build %>/press/',
+        layout: 'post-press.hbs'
       }
     },
 
