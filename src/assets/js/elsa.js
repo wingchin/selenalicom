@@ -106,7 +106,7 @@ if ($('#instafeed').length) {
                     '</div>' +
                   '</a>' +
                 '</figcaption>' +
-                '<img src="http:{{image}}" class="img-responsive" alt="">' +
+                '<img src="{{image}}" class="img-responsive" alt="">' +
               '</figure>',
     get: 'user',
     userId: 221786646,
