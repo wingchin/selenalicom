@@ -19,7 +19,7 @@ data:             <%= site.src %>/data
 # Site metadata
 # =============================================
 
-title:            Selena Li Official Website
+title:            Selena Lee Official Website
 description:      Actress / Host / Enterpreneur / Beauty Guru
 url:              http://selena-li.com
 since:            2006
