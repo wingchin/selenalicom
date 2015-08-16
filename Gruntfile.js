@@ -98,7 +98,7 @@ module.exports = function(grunt) {
 
       // Build main pages
       site: {
-        src: '<%= site.pages %>/*.hbs',
+        src: ['<%= site.pages %>/*.hbs', '!<%= site.pages %>/schedule.hbs'],
         dest: '<%= site.build %>'
       },
       filmography: {
@@ -119,7 +119,7 @@ module.exports = function(grunt) {
         src: '!*',
         dest: '<%= site.build %>/beauty/'
       },
-      schedule: {
+      /*schedule: {
         options: {
           pages: pages('schedule'),
           area: '<%= site.schedule %>',
@@ -132,7 +132,7 @@ module.exports = function(grunt) {
         src: '<%= site.pages %>/press/*.md',
         dest: '<%= site.build %>/press/',
         layout: 'post-press.hbs'
-      }
+      }*/
     },
 
      // Start a static web server
@@ -170,4 +170,5 @@ module.exports = function(grunt) {
 
   // Tasks when we type "grunt" into the terminal.
   grunt.registerTask('default', [ 'watch' ]);
+  grunt.registerTask('assets', [ 'less', 'autoprefixer', 'concat', 'uglify' ]);
 }
