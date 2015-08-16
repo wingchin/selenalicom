@@ -93,7 +93,7 @@ module.exports = function(grunt) {
           '<%= site.layouts %>/**/*.hbs',
         ],
         layout:     'base.hbs',
-        helpers:    ['handlebars-helper-*']
+        helpers:    ['helper-slugify']
       },
 
       // Build main pages
