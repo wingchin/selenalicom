@@ -8,13 +8,13 @@ layout: base.hbs
       <div class="col-md-5 col-lg-4">
         <div class="item">
           <div class="hover">
-            <a href="{{assets}}/uploads/filmography-poster-{{slugify title}}.jpg">
+            <a href="{{assets}}/uploads/filmography-poster-{{slugify title}}.jpg" data-featherlight="image">
               <span class="block text-center">
                 <i class="fa fa-expand"></i>
               </span>
             </a>
           </div>
-          <img src="{{assets}}/uploads/filmography-poster-{{slugify title}}.jpg" class="img-responsive" alt="">
+          <img src="{{assets}}/uploads/thumb/filmography-poster-{{slugify title}}.jpg" class="img-responsive" alt="{{title}} poster">
         </div>
       </div>
 
@@ -53,7 +53,7 @@ layout: base.hbs
 <section class="small-padding">
   <div class="container">
     <h3 class="text-center">Selena's character</h3>
-    {{#if image}}<img src="http://placehold.it/250x250" class="img-circle center-block" />{{/if}}
+    <!--{{#if image}}<img src="{{assets}}/uploads/filmography-character-{{slugify title}}-1.jpg" width="250" height="250" class="img-responsive img-circle center-block" alt="{{fullname}} character still" />{{/if}}-->
     <h5 class="text-center">{{fullname}}</h5>
 
     <div class="row">
