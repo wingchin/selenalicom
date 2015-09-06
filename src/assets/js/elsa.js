@@ -136,7 +136,7 @@ if ($('#instafeed').length) {
 ==============================
 */
 if ($('#isotope-grid').length) {
-  var $container = $('#isotope-grid .row').imagesLoaded( function() {
+  var $container = $('#isotope-grid .container > .row').imagesLoaded( function() {
     $container.isotope({
       filter: '*',
       layoutMode: 'fitRows'
@@ -148,7 +148,7 @@ if ($('#isotope-grid').length) {
     $(this).addClass('active');
 
     var selector = $(this).attr('data-filter');
-    var $container = $('#isotope-grid .row').imagesLoaded( function() {
+    var $container = $('#isotope-grid .container > .row').imagesLoaded( function() {
       $container.isotope({
         filter: selector,
         layoutMode: 'fitRows'
@@ -171,7 +171,7 @@ if ($('#map').length) {
 
     // Basic options for a simple Google Map
     var mapOptions = {
-      zoom: 12,
+      zoom: 15,
       center: latLng,
 
       // Disables the default Google Maps UI components

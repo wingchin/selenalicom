@@ -12,13 +12,20 @@ layout:     false
         <div class="row">
 
           {{#withSort schedule "date" dir="desc"}}
-            <div class="col-md-6">
-              <div class="thumbnail">
-                <h4><a href="schedule/{{slugify title}}.html">{{title}}</a></h4>
-                <p><i class="fa fa-calendar"></i> {{formatDate date "%B %e, %Y"}}</p>
-                <p><i class="fa fa-map-marker"></i> {{venue}}</p>
+          <div class="col-md-6">
+            <div class="thumbnail">
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="assets/uploads/schedule-{{slugify title}}.jpg" class="img-responsive" width="100%" height="100%" alt="{{title}}">
+                </div>
+                <div class="col-md-8">
+                  <h4><a href="schedule/{{slugify title}}.html">{{title}}</a></h4>
+                  <p><i class="fa fa-calendar"></i> {{formatDate date "%B %e, %Y"}}</p>
+                  <p><i class="fa fa-map-marker"></i> {{venue}}</p>
+                </div>
               </div>
             </div>
+          </div>
           {{/withSort}}
 
         </div>

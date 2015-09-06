@@ -1,46 +1,60 @@
 ---
-layout: base.hbs
+layout: false
 ---
-<section id="event-post" class="default-padding">
-  <div class="container">
-    <div class="row">
+{{#extend "base"}}
 
-      <div class="details col-md-5">
-        <h2>{{title}}</h2>
+  {{#content "body"}}
+    <section id="event-post" class="default-padding">
+      <div class="container">
+        <div class="row">
 
-        <div id="myTab" class="small-padding" role="tablist">
-          <ul class="nav nav-tabs" role="tablist">
-            <li class="active" role="presentation">
-              <a href="#details" data-toggle="tab" role="tab">Event details</a>
-            </li>
-            <li role="presentation">
-              <a href="#attendees" data-toggle="tab" role="tab">Attendees</a>
-            </li>
-          </ul>
-          <div class="tab-content">
-            <div id="details" class="tab-pane active" role="tabpanel">
-              <dl class="dl-horizontal">
-                <dt><i class="fa fa-calendar"></i> Date</dt>
-                <dd>{{formatDate date "%B %e, %Y"}}</dd>
-                <dt><i class="fa fa-clock-o"></i> Time</dt>
-                <dd>{{formatDate date "%l:%M %P"}}</dd>
-                <dt><i class="fa fa-map-marker"></i> Venue</dt>
-                <dd>{{venue}}</dd>
-                <dt><i class="fa fa-location-arrow"></i> Address</dt>
-                <dd>{{address}}</dd>
-              </dl>
-            </div>
-            <div id="attendees" class="tab-pane" role="tabpanel">
-              {{{attendees}}}
+          <div class="details col-md-5">
+            <h2>{{title}}</h2>
+
+            <div id="myTab" class="small-padding" role="tablist">
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="active" role="presentation">
+                  <a href="#details" data-toggle="tab" role="tab">Event details</a>
+                </li>
+                <li role="presentation">
+                  <a href="#attendees" data-toggle="tab" role="tab">Attendees</a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div id="details" class="tab-pane active" role="tabpanel">
+                  <dl class="dl-horizontal">
+                    <dt><i class="fa fa-calendar"></i> Date</dt>
+                    <dd>{{formatDate date "%B %e, %Y"}}</dd>
+                    <dt><i class="fa fa-clock-o"></i> Time</dt>
+                    <dd>{{formatDate date "%l:%M %P"}}</dd>
+                    <dt><i class="fa fa-map-marker"></i> Venue</dt>
+                    <dd>{{venue}}</dd>
+                    <dt><i class="fa fa-location-arrow"></i> Address</dt>
+                    <dd>{{address}}</dd>
+                  </dl>
+                </div>
+                <div id="attendees" class="tab-pane" role="tabpanel">
+                  {{{attendees}}}
+                </div>
+              </div>
             </div>
           </div>
+
+          <div class="col-md-7">
+            <div id="map"></div>
+          </div>
+
         </div>
       </div>
+    </section>
+  {{/content}}
 
-      <div class="col-md-7">
-        <div id="map"></div>
-      </div>
+  {{#content "script" mode="prepend"}}
+    <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+       // The latitude and longitude of the location
+      var position = [{{map}}];
+    </script>
+  {{/content}}
 
-    </div>
-  </div>
-</section>
+{{/extend}}
