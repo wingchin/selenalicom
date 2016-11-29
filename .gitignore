@@ -4,3 +4,4 @@ build
 src/assets/uploads
 src/assets/images
 .editorconfig
+.gitignore
