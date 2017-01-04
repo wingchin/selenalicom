@@ -64,14 +64,14 @@ fanclub:
 # =============================================
 
 prose:
-  rooturl: 'source'
-  siteurl: 'https://selena.netlify.com/'
-  media: 'uploads'
+  rooturl: source
+  siteurl: https://selena.netlify.com/
+  media: uploads
   ignore:
     - _jekyll
     - assets
   metadata:
-    _beauty:
+    source/_beauty:
       - name: "date"
         field:
           element: "text"
@@ -80,27 +80,3 @@ prose:
         field:
           element: "text"
           label: "YouTube ID"
-    _filmography:
-      - name: "genre"
-        field:
-          element: "select"
-          label: "Genre"
-          options:
-            - name: "Ancient"
-              value: "ancient"
-            - name: "Modern
-              value: "modern"
-            - name: "Pre-modern"
-              value: "pre-modern"
-      - name: "episodes"
-        field:
-          element: "number"
-          label: "Number of episodes"
-      - name: "synopsis"
-        field:
-          element: "textarea"
-          label: "Synopsis"
-      - name: "image"
-        field:
-          element: "checkbox"
-          label: "Image?"
