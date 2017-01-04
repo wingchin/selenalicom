@@ -1,6 +1,3 @@
-node_modules
-.grunt
-src/assets/uploads
-src/assets/images
+build
 .editorconfig
 .gitignore
