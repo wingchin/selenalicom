@@ -68,10 +68,10 @@ prose:
   siteurl: 'https://selena.netlify.com/'
   media: 'uploads'
   ignore:
-    - /_jekyll
-    - /assets
+    - _jekyll
+    - assets
   metadata:
-    _beauty:
+    source/_beauty:
       - name: "date"
         field:
           element: "text"
