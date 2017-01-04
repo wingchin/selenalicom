@@ -9,12 +9,24 @@ layouts_dir:      _jekyll/_layouts
 includes_dir:     _jekyll/_includes
 data_dir:         _jekyll/_data
 collections:
+<<<<<<< HEAD
   beauty:
     output:       true
   filmography:
     output:       true
 
 # Outputting
+=======
+  filmography:
+    title: Filmography
+    output: true
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+>>>>>>> 1429b01b284e29bd7554dc27cbe934b2f0e0e685
 defaults:
   -
     scope:
