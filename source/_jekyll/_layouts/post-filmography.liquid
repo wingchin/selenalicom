@@ -1,0 +1,130 @@
+---
+layout: base
+---
+<section id="filmography-post" class="default-padding">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm-4 col-md-5 col-lg-4">
+        <div class="item">
+          <div class="hover">
+            <a href="{{ "assets/uploads/" | relative_url }}filmography-poster-{{ page.slug }}.jpg" data-featherlight="image">
+              <span class="block text-center">
+                <i class="fa fa-expand"></i>
+              </span>
+            </a>
+          </div>
+          <img src="{{ "assets/uploads/thumb/" | relative_url}}filmography-poster-{{ page.slug }}.jpg" class="img-responsive" width="100%" height="100%" alt="{{ page.title }} poster">
+        </div>
+      </div>
+
+      <div class="details col-sm-8 col-md-7 col-lg-8">
+        <h1>{{ page.title }}</h1>
+        {% if page.chinesetitle %}
+          <h5>{{ page.chinesetitle }} {% if page.previoustitle %}({{ page.previoustitle }}){% endif %}</h5>
+        {% endif %}
+
+        <div class="small-padding">
+          <div class="well well-lg">
+            <dl class="dl-horizontal">
+              <dt>Broadcast Date</dt>
+              <dd>{{ page.broadcaststart | date: "%B %e, %Y" }} - {{ page.broadcastend | date: "%B %e, %Y" }}</dd>
+              <dt>Genre(s)</dt>
+              <dd>{{ page.genre | capitalize }}</dd>
+              <dt>Running Time</dt>
+              <dd>{{ page.episodes }} episodes</dd>
+              <!--<dt>Starring</dt>
+              <dd>{{ page.starring }}</dd>-->
+              <dt>Produced by</dt>
+              <dd>{{ page.producer }}</dd>
+            </dl>
+
+            <a class="btn btn-default" href="{{ page.website }}">Official Website</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="small-padding white">
+  <div class="container">
+    <h3 class="text-center">Synopsis</h3>
+    <p>{{ page.synopsis }}</p>
+  </div>
+</section>
+
+<section class="small-padding">
+  <div class="container">
+    <h3 class="text-center">Selena's character</h3>
+    <h5 class="text-center">{{ page.fullname }}{% if guest%} <span class="label label-primary">Guest</span>{% endif %}</h5>
+
+    <div class="row">
+      <div class="{% if page.image %}col-md-9{% else %}col-md-12{% endif %}">
+        <div id="myTab" class="small-padding" role="tablist">
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="active" role="presentation">
+              <a href="#information" data-toggle="tab" role="tab">Basic information</a>
+            </li>
+            {% if page.personality %}
+              <li role="presentation">
+                <a href="#personality" data-toggle="tab" role="tab">Personality</a>
+              </li>
+              <li role="presentation">
+                <a href="#background" data-toggle="tab" role="tab">Background</a>
+              </li>
+              <li role="presentation">
+                <a href="#happenings" data-toggle="tab" role="tab">Happenings</a>
+              </li>
+            {% endif %}
+          </ul>
+
+          <div class="tab-content">
+            <div id="information" class="tab-pane active" role="tabpanel">
+              <dl class="dl-horizontal">
+                {% if page.altname %}
+                  <dt>Nickname(s)</dt>
+                  <dd>{{ page.altname }}</dd>
+                {% endif %}
+
+                {% if page.age %}
+                  <dt>Age</dt>
+                  <dd>{{ page.age }} years</dd>
+                {% endif %}
+
+                {% if page.identity %}
+                  <dt>Identity</dt>
+                  <dd>{{ page.identity }}</dd>
+                {% endif %}
+
+                <dt>Appearance</dt>
+                <dd>Episode {{ page.appearance }}</dd>
+
+                {% if page.relationship %}
+                <dt>Relationships</dt>
+                <dd>
+                  <ul>{% for i in page.relationship %}
+                    <li>{{ i }}</li>
+                  {% endfor %}</ul>
+                </dd>
+                {% endif %}
+              </dl>
+            </div>
+            {% if page.personality %}
+              <div id="personality" class="tab-pane" role="tabpanel">{{ page.personality }}</div>
+              <div id="background" class="tab-pane" role="tabpanel">{{ page.background }}</div>
+              <div id="happenings" class="tab-pane" role="tabpanel">{{ page.happenings }}</div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% if page.image %}
+      <div class="col-md-3">
+        <img src="{{ "assets/uploads/" | relative_url }}filmography-character-{{ page.slug }}-1.jpg" class="img-responsive center-block img-rounded" width="100%" height="100%" alt="{{fullname}} character" />
+      </div>
+      {% endif %}
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,23 @@
+---
+layout: base
+---
+{% include call-to-action.html %}
+
+<section id="video-post" class="default-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-lg-8">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe width="640" height="360" src="//www.youtube-nocookie.com/embed/{{ page.videoID }}?theme=light&amp;color=white&amp;rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="details col-md-5 col-lg-4">
+        <h2>{{ page.title }}</h2>
+        <h6>{{ page.date | date: "%B %e, %Y" }}</h6>
+        <span class="line left"></span>
+        <p class="small-padding">{{ content }}</p>
+        <a href="http://www.youtube.com/watch?v={{ page.videoID }}" class="btn btn-default">Watch on YouTube</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,37 @@
+<ul class="list-inline">
+{% if include.account  == 'fanclub' %}
+  {% assign name = "Selena Fan Club" %}
+  <li>
+    <a href="http://twitter.com/{{ site.fanclub.twitter }}" title="{{ name }} Twitter"><i class="fa fa-twitter"></i></a>
+  </li>
+  <li>
+    <a href="http://instagram.com/{{ site.fanclub.instagram }}" title="{{ name }} Instagram"><i class="fa fa-instagram"></i></a>
+  </li>
+  <li>
+    <a href="http://vimeo.com/{{ site.fanclub.vimeo }}" title="{{ name }} Vimeo"><i class="fa fa-vimeo-square"></i></a>
+  </li>
+  <li>
+    <a href="http://www.weibo.com/{{ site.fanclub.weibo }}" title="{{ name }} Sina Weibo"><i class="fa fa-weibo"></i></a>
+  </li>
+  <li>
+    <a href="http://t.qq.com/{{ site.fanclub.tencent }}" title="{{ name }} Tencent Weibo"><i class="fa fa-tencent-weibo"></i></a>
+  </li>
+{% else %}
+  {% assign name = "Selena Lee's" %}
+  <li>
+    <a href="http://facebook.com/{{ site.selena.facebook }}" title="{{ name }} Facebook"><i class="fa fa-facebook"></i></a>
+  </li>
+  <li>
+    <a href="http://instagram.com/{{ site.selena.instagram }}" title="{{ name }} Instagram"><i class="fa fa-instagram"></i></a>
+  </li>
+  <li>
+    <a href="http://youtube.com/user/{{ site.selena.youtube }}" title="{{ name }} YouTube"><i class="fa fa-youtube"></i></a>
+  </li>
+  <li>
+    <a href="http://www.weibo.com/u/{{ site.selena.weibo }}" title="{{ name }} Sina Weibo"><i class="fa fa-weibo"></i></a>
+  </li>
+  <li>
+    <a href="http://t.qq.com/{{ site.selena.tencent }}" title="{{ name }} Tencent Weibo"><i class="fa fa-tencent-weibo"></i></a>
+  </li>
+{% endif %}
+</ul>
