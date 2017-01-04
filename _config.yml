@@ -58,3 +58,23 @@ fanclub:
   vimeo:          selenalicom
   weibo:          selenaliofficial
   tencent:        selenaliofficial
+
+# =============================================
+# CMS configuration
+# =============================================
+
+prose:
+  rooturl: 'source'
+  siteurl: 'https://selena.netlify.com/'
+  media: 'uploads'
+  ignore:
+    - /_jekyll
+    - /assets
+  metadata:
+    _beauty:
+      - name: "date"
+        field:
+          element: "text"
+      - name: "videoID"
+        field:
+          element: "text"
