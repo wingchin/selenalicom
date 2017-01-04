@@ -12,7 +12,7 @@
       {% unless page.home %}{{ page.title }} &middot; {% endunless %}{{ site.title }}
     </title>
 
-    <link href="{{ "assets/css/" | relative_url }}elsa.min.css" rel="stylesheet">
+    <link href="{{ "assets/css/" | relative_url }}style.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -120,15 +120,12 @@
     =================================== -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-    {% case page.script %}
-    {% when "instafeed" %}
-      <script src="{{ "assets/js/plugins/" | relative_url }}instafeed.min.js"></script>
-    {% when "isotope" %}
+    {% if page.script %}
       <script src="{{ "assets/js/plugins/" | relative_url }}imagesloaded.min.js"></script>
-      <script src="{{ "assets/js/plugins/" | relative_url }}isotope.min.js"></script>
-    {% endcase %}
+      <script src="{{ "assets/js/plugins/" | relative_url }}{{ page.script }}.min.js"></script>
+    {% endif %}
 
-    <script src="{{ "assets/js/" | relative_url }}elsa.min.js"></script>
+    <script src="{{ "assets/js/" | relative_url }}script.min.js"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
