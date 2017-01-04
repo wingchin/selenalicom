@@ -64,19 +64,32 @@ fanclub:
 # =============================================
 
 prose:
-  rooturl: source
-  siteurl: https://selena.netlify.com/
-  media: uploads
+  rooturl:        source
+  siteurl:        https://selena.netlify.com/
+  media:          uploads
   ignore:
     - _jekyll
     - assets
   metadata:
     source/_beauty:
-      - name: "date"
+      -
+        name:       "title"
         field:
-          element: "text"
-          label: "Date"
-      - name: "videoID"
+          element:  "text"
+          label:    "Title"
+      -
+        name:       "date"
         field:
-          element: "text"
-          label: "YouTube ID"
+          element:  "text"
+          label:    "Date"
+      -
+        name:       "videoID"
+        field:
+          element:  "text"
+          label:    "YouTube ID"
+    source/_filmography:
+      -
+        name:       "image"
+        field:
+          element:  "checkbox"
+          label:    "Image?"
