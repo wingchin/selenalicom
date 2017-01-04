@@ -1,0 +1,145 @@
+/*-----------------------------------------------------------------------------------*/
+/* COMPONENTS
+/*-----------------------------------------------------------------------------------*/
+
+/*
+==============================
+
+  NAVBAR
+
+==============================
+*/
+.navbar {
+  font-family: @headings-font-family;
+  transition: background .5s ease-in-out, padding .5s ease-in-out;
+
+  li > a {
+    font-size: @font-size-small + 1;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background .215s ease-in-out;
+  }
+
+  .navbar-brand {
+    img {
+      max-height: 40px;
+      transition: opacity .215s ease-in-out;
+
+      &:hover { opacity: .75; }
+    }
+  }
+
+  .navbar-toggle {
+    border-radius: 0;
+
+    i { font-size: @font-size-h2; }
+  }
+
+}
+@media(min-width: @grid-float-breakpoint) {
+  .navbar {
+    padding: 25px 0;
+
+    .navbar-brand { padding: 8px 15px; }
+  }
+}
+@media(max-width: @grid-float-breakpoint-max) {
+  .navbar {
+    .collapse.in { border-top: 1px solid #CAD4DD; }
+  }
+  .navbar-nav {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.top-nav-collapse {
+  padding: 0;
+  background-color: @white;
+  border-bottom: 1px solid #CAD4DD;
+  box-shadow: 0 1px 3px fade(@black, 10%);
+}
+
+
+/*
+==============================
+
+  BUTTONS
+
+==============================
+*/
+.btn {
+  font-family: @headings-font-family;
+  font-size: @font-size-small + 1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 16px 21px 16px 24px;
+  border-radius: 2px;
+  border-width: 2px;
+  transition: all 0.215s ease-in-out;
+
+  &-default:hover {
+    background-color: @brand-primary;
+    color: @white;
+    border-color: @brand-primary;
+  }
+  &-primary:hover {
+    background-color: @white;
+    color: @brand-primary;
+    border-color: @brand-primary;
+  }
+}
+
+
+/*
+==============================
+
+  TABS
+
+==============================
+*/
+.nav-tabs {
+  font-family: @headings-font-family;
+
+  li {
+    font-size: @font-size-small + 1;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    > a { padding: 12px 30px; }
+  }
+}
+.tab-content {
+  background-color: @white;
+  padding: 25px;
+}
+
+
+/*
+==============================
+
+  HORIZONTAL LIST
+
+==============================
+*/
+.dl-horizontal {
+  dt, dd {
+    padding: 8px 0 4px;
+    font-size: @font-size-base - 2;
+    line-height: 30px;
+  }
+
+  dd {
+    border-bottom: 1px solid #dfdfdf;
+
+    &:last-of-type { border: none; }
+  }
+}
+
+@media(min-width: @screen-sm-min) {
+  .dl-horizontal {
+    dt { text-align: left; }
+    dd { margin-left: 0; }
+  }
+}

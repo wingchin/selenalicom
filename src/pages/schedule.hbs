@@ -1,0 +1,41 @@
+---
+title:      <%= site.schedule.title %>
+subtitle:   <%= site.schedule.subtitle %>
+
+layout:     false
+---
+{{#extend "base"}}
+
+  {{#content "body"}}
+    <section id="isotope-grid" class="default-padding">
+      <div class="container">
+        <div class="row">
+
+          {{#withSort schedule "date" dir="desc"}}
+          <div class="col-md-6">
+            <div class="thumbnail">
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="assets/uploads/schedule-{{slugify title}}.jpg" class="img-responsive" width="100%" height="100%" alt="{{title}}">
+                </div>
+                <div class="col-md-8">
+                  <h4><a href="schedule/{{slugify title}}.html">{{title}}</a></h4>
+                  <p><i class="fa fa-calendar"></i> {{formatDate date "%B %e, %Y"}}</p>
+                  <p><i class="fa fa-map-marker"></i> {{venue}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{/withSort}}
+
+        </div>
+      </div>
+    </section>
+  {{/content}}
+
+  {{#content "script" mode="prepend"}}
+    <script src="{{assets}}/js/plugins/imagesloaded.min.js"></script>
+    <script src="{{assets}}/js/plugins/isotope.min.js"></script>
+  {{/content}}
+
+{{/extend}}
