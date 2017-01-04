@@ -1,60 +1,23 @@
-# =============================================
-# Jekyll configuration
-# =============================================
-
-# Where things are
-source:           ./source
-destination:      ./build
-layouts_dir:      _jekyll/_layouts
-includes_dir:     _jekyll/_includes
-data_dir:         _jekyll/_data
+---
+title: Selena Lee Official Website
+timezone: UTC
 collections:
-  beauty:
-    output:       true
-  filmography:
-    output:       true
-
-# Outputting
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 defaults:
-  -
-    scope:
-      path:       ""
-      type:       pages
-    values:
-      layout:     base
-  -
-    scope:
-      path:       ""
-      type:       beauty
-    values:
-      layout:     post-beauty
-  -
-    scope:
-      path:       ""
-      type:       filmography
-    values:
-      layout:     post-filmography
-
-# =============================================
-# Site metadata
-# =============================================
-
-# General
-title:            Selena Lee Official Website
-url:              http://selena-lee.com
-since:            2006
-
-# Accounts
-analytics:        UA-12048611-1
-selena:
-  facebook:       selenaleelalee
-  instagram:      selenaleelalee
-  youtube:        selenabeautytips
-  weibo:          1731864915
-  tencent:        selenaliszewan
-fanclub:
-  twitter:        selenalicom
-  instagram:      selenaleeofficial
-  vimeo:          selenalicom
-  weibo:          selenaliofficial
-  tencent:        selenaliofficial
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+    permalink: "/posts/:title/"
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: page
+permalink: pretty
