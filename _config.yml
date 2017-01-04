@@ -2,6 +2,9 @@
 title: Selena Lee Official Website
 timezone: UTC
 collections:
+  filmography:
+    title: Filmography
+    output: true
   posts:
     title: Posts
     output: true
