@@ -75,6 +75,33 @@ prose:
       - name: "date"
         field:
           element: "text"
+          label: "Date"
       - name: "videoID"
         field:
           element: "text"
+          label: "YouTube ID"
+  metadata:
+    source/_filmography:
+      - name: "genre"
+        field:
+          element: "select"
+          label: "Genre"
+          options:
+            - name: "Ancient"
+              value: "ancient"
+            - name: "Modern
+              value: "modern"
+            - name: "Pre-modern"
+              value: "pre-modern"
+      - name: "episodes"
+        field:
+          element: "number"
+          label: "Number of episodes"
+      - name: "synopsis"
+        field:
+          element: "textarea"
+          label: "Synopsis"
+      - name: "image"
+        field:
+          element: "checkbox"
+          label: "Image?"
