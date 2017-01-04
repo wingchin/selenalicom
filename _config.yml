@@ -71,7 +71,7 @@ prose:
     - _jekyll
     - assets
   metadata:
-    source/_beauty:
+    _beauty:
       - name: "date"
         field:
           element: "text"
@@ -80,7 +80,7 @@ prose:
         field:
           element: "text"
           label: "YouTube ID"
-    source/_filmography:
+    _filmography:
       - name: "genre"
         field:
           element: "select"
