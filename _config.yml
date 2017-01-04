@@ -80,7 +80,6 @@ prose:
         field:
           element: "text"
           label: "YouTube ID"
-  metadata:
     source/_filmography:
       - name: "genre"
         field:
