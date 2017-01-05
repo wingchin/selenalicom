@@ -1,51 +1,60 @@
-title: Selena Lee Official Website
-timezone: UTC
+# =============================================
+# Jekyll configuration
+# =============================================
+
+# Where things are
+source:           ./source
+destination:      ./build
+layouts_dir:      _jekyll/_layouts
+includes_dir:     _jekyll/_includes
+data_dir:         _jekyll/_data
 collections:
   beauty:
-    title: Beauty
-    output: true
+    output:       true
   filmography:
-    title: Filmography
-    output: true
-  posts:
-    title: Posts
-    output: true
-  uploads:
-    title: Uploads
-    output: true
+    output:       true
+
+# Outputting
 defaults:
-- scope:
-    path: ''
-    type: pages
-  values:
-    layout: base
-- scope:
-    path: ''
-    type: beauty
-  values:
-    layout: post-beauty
-- scope:
-    path: ''
-    type: filmography
-  values:
-    layout: post-filmography
-source: ./
-destination: ./build
-layouts_dir: _jekyll/_layouts
-includes_dir: _jekyll/_includes
-data_dir: _jekyll/_data
-url: http://selena-lee.com
-since: 2006
-analytics: UA-12048611-1
+  -
+    scope:
+      path:       ""
+      type:       pages
+    values:
+      layout:     base
+  -
+    scope:
+      path:       ""
+      type:       beauty
+    values:
+      layout:     post-beauty
+  -
+    scope:
+      path:       ""
+      type:       filmography
+    values:
+      layout:     post-filmography
+
+# =============================================
+# Site metadata
+# =============================================
+
+# General
+title:            Selena Lee Official Website
+url:              http://selena-lee.com
+since:            2006
+
+# Accounts
+analytics:        UA-12048611-1
 selena:
-  facebook: selenaleelalee
-  instagram: selenaleelalee
-  youtube: selenabeautytips
-  weibo: 1731864915
-  tencent: selenaliszewan
+  facebook:       selenaleelalee
+  instagram:      selenaleelalee
+  youtube:        selenabeautytips
+  weibo:          1731864915
+  tencent:        selenaliszewan
 fanclub:
-  twitter: selenalicom
-  instagram: selenaleeofficial
-  vimeo: selenalicom
-  weibo: selenaliofficial
-  tencent: selenaliofficial
+  twitter:        selenalicom
+  instagram:      selenaleeofficial
+  vimeo:          selenalicom
+  weibo:          selenaliofficial
+  tencent:        selenaliofficial
