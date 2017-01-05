@@ -1,3 +1,4 @@
+---
 title: Selena Lee Official Website
 timezone: UTC
 collections:
@@ -29,8 +30,8 @@ defaults:
     type: filmography
   values:
     layout: post-filmography
-source: ./
-destination: ./build
+source: "./"
+destination: "./build"
 layouts_dir: _jekyll/_layouts
 includes_dir: _jekyll/_includes
 data_dir: _jekyll/_data
