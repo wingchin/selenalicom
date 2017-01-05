@@ -57,4 +57,43 @@ fanclub:
   instagram:      selenaleeofficial
   vimeo:          selenalicom
   weibo:          selenaliofficial
+<<<<<<< HEAD
   tencent:        selenaliofficial
+=======
+  tencent:        selenaliofficial
+
+# =============================================
+# CMS configuration
+# =============================================
+
+prose:
+  rooturl:        source
+  siteurl:        https://selena.netlify.com/
+  media:          uploads
+  ignore:
+    - _jekyll
+    - assets
+  metadata:
+    source/_beauty:
+      -
+        name:       "title"
+        field:
+          element:  "text"
+          label:    "Title"
+      -
+        name:       "date"
+        field:
+          element:  "text"
+          label:    "Date"
+      -
+        name:       "videoID"
+        field:
+          element:  "text"
+          label:    "YouTube ID"
+    source/_filmography:
+      -
+        name:       "image"
+        field:
+          element:  "checkbox"
+          label:    "Image?"
+>>>>>>> 15baf4e1ec3d612bbc0e8dc4eaade389778a79ab
