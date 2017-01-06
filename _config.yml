@@ -13,8 +13,11 @@ collections:
     output:       true
   filmography:
     output:       true
+  schedule:
+    output:       true
 
 # Outputting
+permalink:        pretty
 defaults:
   -
     scope:
@@ -34,6 +37,12 @@ defaults:
       type:       filmography
     values:
       layout:     post-filmography
+  -
+    scope:
+      path:       ""
+      type:       schedule
+    values:
+      layout:     post-schedule
 
 # =============================================
 # Site metadata

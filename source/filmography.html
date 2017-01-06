@@ -22,8 +22,8 @@ script:     isotope
   <div class="container">
     <div class="row">
 
-      {% assign dramas = site.filmography | sort: 'broadcaststart' %}
-      {% for i in dramas reversed %}
+      {% assign dramas = (site.filmography | sort: 'broadcaststart') | reverse %}
+      {% for i in dramas %}
       <div class="col-md-3 col-sm-4 col-xs-12 {{ i.genre }}">
         <figure class="thumbnail">
           <div class="item">
@@ -34,7 +34,7 @@ script:     isotope
                 </span>
               </a>
             </div>
-            <img src="{{ "assets/uploads/thumb/" | relative_url }}filmography-poster-{{ i.slug }}.jpg" class="img-responsive" alt="">
+            <img src="{{ "assets/uploads/thumb/" | relative_url }}filmography-poster-{{ i.slug }}.jpg" class="img-responsive" alt="{{ i.title }}">
           </div>
           <figcaption class="caption">
             <h4><a href="{{ i.url }}">{{ i.title }}</a></h4>
