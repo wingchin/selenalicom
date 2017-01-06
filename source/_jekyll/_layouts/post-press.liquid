@@ -1,0 +1,24 @@
+---
+layout: base
+---
+<section id="news-post" class="default-padding white">
+  <div class="container">
+    <h2>{{ page.title }}</h2>
+
+    <div class="row">
+      <div class="col-md-2 col-md-offset-1">
+        <dl class="dl text-right">
+          <dt>Date</dt>
+          <dd>{{ page.date | date: "%B %e, %Y"}}</dd>
+          <dt>Source </dt>
+          <dd><a href="{{ page.sourceurl }}">{{ page.source }}</a></dd>
+          <dt>Translator</dt>
+          <dd>{{ page.translator }}</dd>
+        </dl>
+      </div>
+      <div class="col-md-7">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</section>
