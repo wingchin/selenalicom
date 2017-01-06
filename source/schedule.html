@@ -10,7 +10,7 @@ script:     isotope
     <div class="row">
 
       {% assign events = site.schedule | sort: 'date' %}
-      {% for i in events %}
+      {% for i in events reversed %}
       <div class="col-md-6">
         <div class="thumbnail">
           <div class="row">

@@ -58,7 +58,7 @@ script: maps
         <figure class="thumbnail">
           <div class="item">
             <div class="hover">
-              <a href="filmography/{{ page.drama | slugify | relative_url }}">
+              <a href="{{ "filmography/" | relative_url }}{{ page.drama | slugify }}">
                 <span class="block text-center">
                   <i class="fa fa-plus"></i>
                 </span>
@@ -67,7 +67,7 @@ script: maps
             <img src="{{ "assets/uploads/thumb/" | relative_url }}filmography-poster-{{ page.drama | slugify }}.jpg" class="img-responsive" alt="{{ page.drama }}">
           </div>
           <figcaption class="caption">
-            <h5><a href="filmography/{{ page.drama | slugify | relative_url }}">{{ page.drama }}</a></h5>
+            <h5><a href="{{ "filmography/" | relative_url }}{{ page.drama | slugify }}">{{ page.drama }}</a></h5>
           </figcaption>
         </figure>
       </div>
