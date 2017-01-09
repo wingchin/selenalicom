@@ -1,0 +1,42 @@
+/*-----------------------------------------------------------------------------------*/
+/* IMPORTS
+/*-----------------------------------------------------------------------------------*/
+
+// Variable overrides and custom variables
+@import "_variables";
+
+// Bootstrap
+@import "_bootstrap";
+
+// Custom styling
+@import "custom/_classes";
+@import "custom/_components";
+@import "custom/_sections";
+
+// Custom fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Raleway:300');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+
+
+/*-----------------------------------------------------------------------------------*/
+/* GENERAL
+/*-----------------------------------------------------------------------------------*/
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+a {
+  font-weight: 700;
+  transition: color .215s ease-in-out;
+}
+
+mark {
+  background-color: lighten($brand-primary, 22%);
+}
