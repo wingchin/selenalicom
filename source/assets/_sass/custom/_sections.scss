@@ -211,15 +211,13 @@ footer {
   i { padding-right: 3px; }
 
   .thumbnail:hover {
+    transition: background .5s ease-in-out;
+    background-color: $black;
+    color: $white;
+
+    a, .caption { color: $white; }
+
     .hover { opacity: 1; }
-    .caption {
-      transition: background .5s ease-in-out;
-
-      background-color: $black;
-      color: $white;
-
-      a { color: $white; }
-    }
   }
 }
 .schedule #isotope-grid {
