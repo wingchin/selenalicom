@@ -14,7 +14,8 @@ layout: base
               </span>
             </a>
           </div>
-          <img src="{{ "assets/uploads/thumb/" | relative_url}}filmography-poster-{{ page.slug }}.jpg" class="img-responsive" width="100%" height="100%" alt="{{ page.title }} poster">
+          {% assign poster = page.slug | prepend: 'thumb/filmography-poster-' | append: '.jpg' %}
+          <img src="{{ poster | asset_path }}" class="img-responsive" width="100%" height="100%" alt="{{ page.title }}">
         </div>
       </div>
 
@@ -121,7 +122,13 @@ layout: base
       </div>
       {% if page.image %}
       <div class="col-md-3">
-        <img src="{{ "assets/uploads/" | relative_url }}filmography-character-{{ page.slug }}-2.jpg" class="img-responsive center-block img-rounded" width="100%" height="100%" alt="{{fullname}} character" />
+        <div class="my-slider">
+          <ul>
+            {% assign charimg1 = page.slug | prepend: 'filmography-character-' | append: '-1.jpg' %}
+            {% assign charimg2 = page.slug | prepend: 'filmography-character-' | append: '-2.jpg' %}
+            <li><img src="{{ charimg1 | asset_path }}" class="img-responsive center-block img-rounded" width="100%" height="100%" alt="{{ page.fullname }}"></li>
+          </ul>
+        </div>
       </div>
       {% endif %}
     </div>
@@ -142,7 +149,8 @@ layout: base
           <div class="thumbnail">
             <div class="row">
               <div class="col-md-4">
-                <img src="{{ "assets/uploads/" | relative_url }}schedule-{{ i.slug }}.jpg" class="img-responsive" width="100%" height="100%" alt="{{ i.title }}">
+                {% assign thumb = i.slug | prepend: 'schedule-' | append: '.jpg' %}
+                <img src="{{ thumb | asset_path }}" class="img-responsive" width="100%" height="100%" alt="{{ i.title }}">
               </div>
               <div class="col-md-8">
                 <h4><a href="{{ i.url }}">{{ i.title }}</a></h4>

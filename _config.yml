@@ -8,6 +8,7 @@ destination:      ./build
 layouts_dir:      _jekyll/_layouts
 includes_dir:     _jekyll/_includes
 data_dir:         _jekyll/_data
+plugins_dir:      _jekyll/_plugins
 collections:
   beauty:
     output:       true
@@ -18,37 +19,45 @@ collections:
   press:
     output:       true
 
-# Handling Reading
-exclude:          [".map"]
-
 # Outputting
 permalink:        pretty
 defaults:
   - scope:
-      path:       ""
+      path:       ''
       type:       pages
     values:
       layout:     base
   - scope:
-      path:       ""
+      path:       ''
       type:       beauty
     values:
       layout:     post-beauty
   - scope:
-      path:       ""
+      path:       ''
       type:       filmography
     values:
       layout:     post-filmography
+      script:     unslider
+      style:      unslider
   - scope:
-      path:       ""
+      path:       ''
       type:       schedule
     values:
       layout:     post-schedule
   - scope:
-      path:       ""
+      path:       ''
       type:       press
     values:
       layout:     post-press
+
+# Plugins
+assets:
+  cache:          false
+  sources:
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _assets/images
+    - _assets/uploads
 
 # =============================================
 # Site metadata

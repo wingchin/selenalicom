@@ -22,7 +22,8 @@ script:     isotope
                 </span>
               </a>
             </div>
-            <img src="{{ "assets/uploads/" | relative_url }}beauty-video-{{ i.slug }}.jpg" class="img-responsive" alt="{{ i.title }}">
+            {% assign shot = i.slug | prepend: 'beauty-video-' | append: '.jpg' %}
+            <img src="{{ shot | asset_path }}" class="img-responsive" alt="{{ i.title }}">
           </div>
           <figcaption class="caption">
             <h4><a href="{{ i.url }}">{{ i.title }}</a></h4>

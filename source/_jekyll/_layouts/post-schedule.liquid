@@ -50,7 +50,8 @@ layout: base
                 </span>
               </a>
             </div>
-            <img src="{{ "assets/uploads/thumb/" | relative_url }}filmography-poster-{{ page.drama | slugify }}.jpg" class="img-responsive" alt="{{ page.drama }}">
+            {% assign poster = page.drama | slugify | prepend: 'thumb/filmography-poster-' | append: '.jpg' %}
+            <img src="{{ poster | asset_path }}" class="img-responsive" alt="{{ page.drama }}">
           </div>
           <figcaption class="caption">
             <h6><a href="{{ "filmography/" | relative_url }}{{ page.drama | slugify }}">{{ page.drama }}</a></h6>

@@ -2,6 +2,10 @@
 /* IMPORTS
 /*-----------------------------------------------------------------------------------*/
 
+// Custom fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Raleway:300');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+
 // Variable overrides and custom variables
 @import "_variables";
 
@@ -12,11 +16,6 @@
 @import "custom/_classes";
 @import "custom/_components";
 @import "custom/_sections";
-
-// Custom fonts
-@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Raleway:300');
-@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
-
 
 /*-----------------------------------------------------------------------------------*/
 /* GENERAL

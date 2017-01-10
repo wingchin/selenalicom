@@ -19,7 +19,7 @@ $black:                 $grayish;
 $white:                 #fff;
 
 $brand-primary:         #e892a0 !default; // #337ab7
-@pinkish:               lighten($brand-primary, 23%);
+$pinkish:               lighten($brand-primary, 23%);
 
 $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
