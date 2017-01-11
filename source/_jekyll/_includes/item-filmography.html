@@ -13,7 +13,7 @@
         </a>
       </div>
       {% assign poster = i.slug | prepend: 'filmography-poster-' | append: '.jpg' %}
-      {{ poster | append: ' class="img-responsive" [autosize]' | image }}
+      {{ poster | append: ' class="img-responsive" [resize:260x390]' | image }}
     </div>
     <figcaption class="caption">
       <h4><a href="{{ i.url }}">{{ i.title }}</a></h4>

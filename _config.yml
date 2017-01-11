@@ -23,29 +23,24 @@ collections:
 permalink:        pretty
 defaults:
   - scope:
-      path:       ''
       type:       pages
     values:
       layout:     base
   - scope:
-      path:       ''
       type:       beauty
     values:
       layout:     post-beauty
   - scope:
-      path:       ''
       type:       filmography
     values:
       layout:     post-filmography
       script:     unslider
       style:      unslider
   - scope:
-      path:       ''
       type:       schedule
     values:
       layout:     post-schedule
   - scope:
-      path:       ''
       type:       press
     values:
       layout:     post-press
