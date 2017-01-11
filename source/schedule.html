@@ -8,44 +8,7 @@ script:     isotope
 <section id="isotope-grid" class="default-padding">
   <div class="container">
     <div class="row">
-
-      {% assign events = site.schedule | reverse %}
-      {% for i in events %}
-      <div class="col-md-6">
-        <figure class="thumbnail">
-          <div class="row">
-
-            <div class="col-md-4">
-              <div class="item">
-                <div class="hover">
-                  <a href="{{ i.url }}">
-                    <span class="block text-center">
-                      <i class="fa fa-plus"></i>
-                    </span>
-                  </a>
-                </div>
-                {% if i.image %}
-                  {% assign thumb = i.slug | prepend: 'schedule-' | append: '.jpg' %}
-                  <img src="{{ thumb | asset_path }}" class="img-responsive" width="100%" height="100%" alt="{{ i.title }}">
-                {% else %}
-                  <img src="http://placehold.it/300?text=selena-lee.com" width="100%" height="100%">
-                {% endif %}
-              </div>
-            </div>
-
-            <div class="col-md-8">
-              <figcaption>
-                <h4><a href="{{ i.url }}">{{ i.title }}</a></h4>
-                <p><i class="fa fa-calendar"></i> {{ i.date | date: "%B %e, %Y"}}</p>
-                <p><i class="fa fa-map-marker"></i> {{ i.venue }}</p>
-              </figcaption>
-            </div>
-
-          </div>
-        </figure>
-      </div>
-      {% endfor %}
-
+      {% include item-schedule.html %}
     </div>
   </div>
 </section>

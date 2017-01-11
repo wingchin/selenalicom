@@ -20,35 +20,12 @@ home:       true
   <div class="container">
     <h3>Latest dramas</h3>
     <div class="row">
-
-      {% assign dramas = (site.filmography | sort: 'broadcaststart') | reverse %}
-      {% for i in dramas limit:4 %}
-      <div class="col-md-3 col-sm-4 col-xs-12 {{ i.genre }}">
-        <figure class="thumbnail">
-          <div class="item">
-            <div class="hover">
-              <a href="{{ i.url }}">
-                <span class="block text-center">
-                  <i class="fa fa-plus"></i>
-                </span>
-              </a>
-            </div>
-            {% assign poster = i.slug | prepend: 'thumb/filmography-poster-' | append: '.jpg' %}
-            <img src="{{ poster | asset_path }}" class="img-responsive" alt="{{ i.title }}">
-          </div>
-          <figcaption class="caption">
-            <h4><a href="{{ i.url }}">{{ i.title }}</a></h4>
-            <p>{{ i.fullname }}</p>
-          </figcaption>
-        </figure>
-      </div>
-      {% endfor %}
-
+      {% include item-filmography.html limit="4" %}
     </div>
   </div>
 </section>
 
-<section class="no-padding">
+<section id="isotope-grid" class="no-padding">
   <div class="container-fluid">
     <div id="instafeed" class="row"></div>
   </div>
@@ -56,61 +33,25 @@ home:       true
 
 <section id="isotope-grid" class="default-padding">
   <div class="container">
+    <h3>Recent functions</h3>
+    <div class="row">
+      {% include item-schedule.html limit="4" %}
+    </div>
+  </div>
+</section>
+
+<section id="isotope-grid" class="default-padding">
+  <div class="container">
     <div class="row">
 
-      <div class="col-md-6">
-        <h3>Functions and Events</h3>
-
-        {% assign events = site.schedule | reverse %}
-        {% for i in events limit:2 %}
-          <div class="thumbnail">
-            <div class="row">
-
-              <div class="col-md-4">
-                <div class="item">
-                  <div class="hover">
-                    <a href="{{ i.url }}">
-                      <span class="block text-center">
-                        <i class="fa fa-plus"></i>
-                      </span>
-                    </a>
-                  </div>
-                  {% if i.image %}
-                    {% assign thumb = i.slug | prepend: 'schedule-' | append: '.jpg' %}
-                    <img src="{{ thumb | asset_path }}" class="img-responsive" width="100%" height="100%" alt="{{ i.title }}">
-                  {% else %}
-                    <img src="http://placehold.it/200" width="100%" height="100%">
-                  {% endif %}
-                </div>
-              </div>
-
-              <div class="col-md-8">
-                <figcaption>
-                  <h4><a href="{{ i.url }}">{{ i.title }}</a></h4>
-                  <p><i class="fa fa-calendar"></i> {{ i.date | date: "%B %e, %Y"}}</p>
-                  <p><i class="fa fa-map-marker"></i> {{ i.venue }}</p>
-                </figcaption>
-              </div>
-
-            </div>
-          </div>
-        {% endfor %}
+      <div class="col-md-7">
+        <h3>From the Press</h3>
+        {% include item-press.html limit="4" %}
       </div>
 
-      <div class="col-md-6">
-        <h3>From the Press</h3>
-
-        {% assign news = site.press | reverse %}
-        {% for i in news limit:3 %}
-          <div class="row">
-            <div class="col-md-3">
-              <h6>{{ i.date | date: "%B %e, %Y" }}</h6>
-            </div>
-            <div class="col-md-9">
-              <h4><a href="{{ i.url }}">{{ i.title }}</a></h4>
-            </div>
-          </div>
-        {% endfor %}
+      <div class="col-md-5">
+        <h3>Featured video</h3>
+        {% include item-beauty.html limit="1" %}
       </div>
 
     </div>

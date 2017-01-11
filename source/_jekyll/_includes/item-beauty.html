@@ -1,0 +1,21 @@
+{% assign num = include.limit %}
+
+{% for i in site.beauty limit:num %}
+  <figure class="thumbnail">
+    <div class="item">
+      <div class="hover">
+        <a href="{{ i.url }}">
+          <span class="block text-center">
+            <i class="fa fa-plus"></i>
+          </span>
+        </a>
+      </div>
+      {% assign shot = i.slug | prepend: 'beauty-video-' | append: '.jpg' %}
+      <img src="{{ shot | asset_path }}" class="img-responsive" alt="{{ i.title }}">
+    </div>
+    <figcaption class="caption">
+      <h4><a href="{{ i.url }}">{{ i.title }}</a></h4>
+      <p>{{ i.date | date: "%B %e, %Y" }}</p>
+    </figcaption>
+  </figure>
+{% endfor %}
