@@ -24,8 +24,12 @@ script:     isotope
                     </span>
                   </a>
                 </div>
-                {% assign thumb = i.slug | prepend: 'schedule-' | append: '.jpg' %}
-                <img src="{{ thumb | asset_path }}" class="img-responsive" width="100%" height="100%" alt="{{ i.title }}">
+                {% if i.image %}
+                  {% assign thumb = i.slug | prepend: 'schedule-' | append: '.jpg' %}
+                  <img src="{{ thumb | asset_path }}" class="img-responsive" width="100%" height="100%" alt="{{ i.title }}">
+                {% else %}
+                  <img src="http://placehold.it/300?text=selena-lee.com" width="100%" height="100%">
+                {% endif %}
               </div>
             </div>
 

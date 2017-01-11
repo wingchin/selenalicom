@@ -12,13 +12,8 @@
 // Bootstrap
 @import "_bootstrap";
 
-// Custom styling
-@import "custom/_classes";
-@import "custom/_components";
-@import "custom/_sections";
-
 /*-----------------------------------------------------------------------------------*/
-/* GENERAL
+/* CUSTOM STYLING
 /*-----------------------------------------------------------------------------------*/
 
 html, body {
@@ -39,3 +34,8 @@ a {
 mark {
   background-color: lighten($brand-primary, 22%);
 }
+
+// Classes, components, sections
+@import "custom/_classes";
+@import "custom/_components";
+@import "custom/_sections";

@@ -29,7 +29,8 @@ nav:        1
       {% for i in site.data.timeline %}
       <div class="timeline-block">
         <div class="timeline-img round">
-          <img src="{{ "assets/uploads/" | relative_url }}about-timeline-{{ forloop.index0 }}.jpg" alt="">
+          {% assign item = forloop.index0 | prepend: 'about-timeline-' | append: '.jpg' %}
+          <img src="{{ item | asset_path }}" class="img-responsive" alt="{{ i.title }}">
         </div>
         <div class="timeline-content">
           <p>{{ i.description }}</p>

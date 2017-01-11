@@ -130,11 +130,11 @@ if ($('#instafeed').length) {
 ==============================
 */
 if ($('#isotope-grid').length) {
-  var $container = $('#isotope-grid .container > .row').imagesLoaded( function() {
-    $container.isotope({
-      filter: '*',
-      layoutMode: 'fitRows'
-    });
+  $container = $('#isotope-grid .container > .row');
+
+  $container.isotope({
+    filter: '*',
+    layoutMode: 'fitRows'
   });
 
   $('#filter a').click(function() {
@@ -142,11 +142,10 @@ if ($('#isotope-grid').length) {
     $(this).addClass('active');
 
     var selector = $(this).attr('data-filter');
-    var $container = $('#isotope-grid .container > .row').imagesLoaded( function() {
-      $container.isotope({
-        filter: selector,
-        layoutMode: 'fitRows'
-      });
+
+    $container.isotope({
+      filter: selector,
+      layoutMode: 'fitRows'
     });
   });
 }
