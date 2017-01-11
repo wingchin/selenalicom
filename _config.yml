@@ -34,8 +34,6 @@ defaults:
       type:       filmography
     values:
       layout:     post-filmography
-      script:     unslider
-      style:      unslider
   - scope:
       type:       schedule
     values:
@@ -49,10 +47,10 @@ defaults:
 assets:
   cache:          false
   sources:
-    - _assets/javascripts
-    - _assets/stylesheets
-    - _assets/images
-    - _assets/uploads
+                  - _assets/javascripts
+                  - _assets/stylesheets
+                  - _assets/images
+                  - _assets/uploads
 
 # =============================================
 # Site metadata

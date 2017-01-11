@@ -14,8 +14,8 @@ layout: base
               </span>
             </a>
           </div>
-          {% assign poster = page.slug | prepend: 'thumb/filmography-poster-' | append: '.jpg' %}
-          <img src="{{ poster | asset_path }}" class="img-responsive" width="100%" height="100%" alt="{{ page.title }}">
+          {% assign poster = page.slug | prepend: 'filmography-poster-' | append: '.jpg' %}
+          {{ poster | append: ' class="img-responsive" width="100%" height="100%" [resize:260x390]' | image }}
         </div>
       </div>
 
@@ -122,13 +122,8 @@ layout: base
       </div>
       {% if page.image %}
       <div class="col-md-3">
-        <div class="my-slider">
-          <ul>
-            {% assign charimg1 = page.slug | prepend: 'filmography-character-' | append: '-1.jpg' %}
-            {% assign charimg2 = page.slug | prepend: 'filmography-character-' | append: '-2.jpg' %}
-            <li><img src="{{ charimg1 | asset_path }}" class="img-responsive center-block img-rounded" width="100%" height="100%" alt="{{ page.fullname }}"></li>
-          </ul>
-        </div>
+        {% assign charimg1 = page.slug | prepend: 'filmography-character-' | append: '-1.jpg' %}
+        <img src="{{ charimg1 | asset_path }}" class="img-responsive center-block img-rounded" width="100%" height="100%" alt="{{ page.fullname }}">
       </div>
       {% endif %}
     </div>

@@ -10,7 +10,7 @@ layout: base
         <img src="http://placehold.it/500x500" class="img-responsive">
       </div>
 
-      <div class="details col-md-6">
+      <div class="details {% if page.drama %}col-md-6{% else %}col-md-8{% endif %}">
         <div id="myTab" class="small-padding" role="tablist">
           <ul class="nav nav-tabs" role="tablist">
             <li class="active" role="presentation">
@@ -51,8 +51,8 @@ layout: base
                 </span>
               </a>
             </div>
-            {% assign poster = page.drama | slugify | prepend: 'thumb/filmography-poster-' | append: '.jpg' %}
-            <img src="{{ poster | asset_path }}" class="img-responsive" alt="{{ page.drama }}">
+            {% assign poster = (page.drama | slugify) | prepend: 'filmography-poster-' | append: '.jpg' %}
+            {{ poster | append: ' class="img-responsive" width="100%" height="100%" [resize:260x390]' | image }}
           </div>
           <figcaption class="caption">
             <h6><a href="{{ "filmography/" | relative_url }}{{ page.drama | slugify }}">{{ page.drama }}</a></h6>

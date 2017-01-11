@@ -1,6 +1,7 @@
 {% assign num = include.limit %}
 
 {% for i in site.beauty limit:num %}
+<div class="{% unless num %}col-xs-12 col-sm-6 col-md-4{% endunless %}">
   <figure class="thumbnail">
     <div class="item">
       <div class="hover">
@@ -18,4 +19,5 @@
       <p>{{ i.date | date: "%B %e, %Y" }}</p>
     </figcaption>
   </figure>
+</div>
 {% endfor %}
