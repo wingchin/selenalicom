@@ -18,15 +18,15 @@
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-    transition: background .215s ease-in-out;
+    transition: background .3s ease-in-out;
   }
 
   .navbar-brand {
     img {
       max-height: 40px;
-      transition: opacity .215s ease-in-out;
+      transition: opacity .3s ease-in-out;
 
-      &:hover { opacity: .75; }
+      &:hover { opacity: .5; }
     }
   }
 
@@ -76,7 +76,7 @@
   padding: 16px 21px 16px 24px;
   border-radius: 2px;
   border-width: 2px;
-  transition: all 0.215s ease-in-out;
+  transition: all .3s ease-in-out;
 
   &-default:hover {
     background-color: $brand-primary;
@@ -142,4 +142,28 @@
     dt { text-align: left; }
     dd { margin-left: 0; }
   }
+}
+
+/*
+==============================
+
+  ISOTOPE
+
+==============================
+*/
+.isotope {
+  transition-property: height, width;
+
+  .isotope-item {
+    transition-property: transform, opacity;
+  }
+
+  &, .isotope-item {
+    transition-duration: 0.85s;
+  }
+}
+.isotope-item { z-index: 2; }
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
 }

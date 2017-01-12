@@ -140,7 +140,7 @@ footer {
   color: $white;
   z-index: 99;
   display: none;
-  transition: background .215s ease-in-out;
+  transition: background .3s ease-in-out;
 
   &:hover { background-color: $brand-primary; }
 
@@ -176,53 +176,6 @@ footer {
   }
 }
 
-/*
-==============================
-
-  ISOTOPE
-
-==============================
-*/
-/* ISOTOOPE */
-.isotope {
-  transition-property: height, width;
-
-  .isotope-item {
-    transition-property: transform, opacity;
-  }
-
-  &, .isotope-item {
-    transition-duration: 0.85s;
-  }
-}
-.isotope-item { z-index: 2; }
-.isotope-hidden.isotope-item {
-  pointer-events: none;
-  z-index: 1;
-}
-
-#isotope-grid {
-  h4 { font-size: $font-size-base; }
-  p {
-    font-size: $font-size-small;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-  i { padding-right: 3px; }
-
-  .thumbnail:hover {
-    transition: background .5s ease-in-out;
-    background-color: $black;
-    color: $white;
-
-    a, .caption { color: $white; }
-
-    .hover { opacity: 1; }
-  }
-}
-.schedule #isotope-grid {
-  .thumbnail { padding:10px 20px; }
-}
 
 /*
 ==============================
