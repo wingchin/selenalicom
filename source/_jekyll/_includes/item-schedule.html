@@ -1,4 +1,4 @@
-{% unless related %}{% assign events = site.schedule | reverse %}{% endunless %}
+{% unless include.related %}{% assign events = site.schedule | reverse %}{% endunless %}
 {% assign num = include.limit %}
 
 {% for i in events limit:num %}
