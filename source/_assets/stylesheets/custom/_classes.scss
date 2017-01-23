@@ -95,7 +95,9 @@
     }
   }
 
-  &:hover .hover { opacity: 1; }
+  &:hover .hover {
+    opacity: 1;
+  }
 
   .block {
     position: absolute;

@@ -167,3 +167,34 @@
   pointer-events: none;
   z-index: 1;
 }
+
+
+/*
+==============================
+
+  UNSLIDER
+
+==============================
+*/
+.unslider-nav ol {
+  list-style: none;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+    background: transparent;
+    border-radius: 5px;
+    overflow: hidden;
+    text-indent: -999em;
+    border: 2px solid $brand-primary;
+    cursor: pointer;
+
+    &.unslider-active {
+      background-color: $brand-primary;
+      cursor: default;
+    }
+  }
+}

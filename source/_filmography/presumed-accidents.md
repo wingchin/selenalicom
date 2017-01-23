@@ -14,5 +14,5 @@ fullname:       "Lin Yeuk-Fei (Faye) / Chong Wing-Yee / Princess Yuet Ngai"
 age:            30
 identity:       Insurance sales agent
 appearance:     "1-28"
-image:          yes
+image:          2
 ---

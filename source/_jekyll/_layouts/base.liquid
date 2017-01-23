@@ -13,8 +13,9 @@
     </title>
 
     {% if page.style %}
-      {% assign style = page.style | prepend: 'plugins/' %}
-      {{ style | stylesheet }}
+      {% for style in page.style %}
+        {{ style | prepend: 'plugins/' | stylesheet }}
+      {% endfor %}
     {% endif %}
 
     {% stylesheet main %}
@@ -126,8 +127,9 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     {% if page.script %}
-      {% assign script = page.script | prepend: 'plugins/' %}
-      {{ script | javascript }}
+      {% for script in page.script %}
+        {{ script | prepend: 'plugins/' | javascript }}
+      {% endfor %}
     {% endif %}
 
     <!--{% if layout.script %}

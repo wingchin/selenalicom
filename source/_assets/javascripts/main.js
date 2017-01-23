@@ -149,3 +149,15 @@ if ($('#isotope-grid').length) {
     });
   });
 }
+
+
+/*
+==============================
+
+  UNSLIDER
+
+==============================
+*/
+$(document).ready(function($) {
+  $('.my-slider').unslider();
+});
