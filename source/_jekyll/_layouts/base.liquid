@@ -127,23 +127,18 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     {% if page.script %}
-      {% for script in page.script %}
-        {{ script | prepend: 'plugins/' | javascript }}
-      {% endfor %}
-    {% endif %}
-
-    <!--{% if layout.script %}
-      {% if layout.script == 'maps' %}
-        <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
+      {% if page.script == 'maps' %}
         <script type="text/javascript">
            // The latitude and longitude of the location
           var position = [{{ page.map }}];
         </script>
+        <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyADkWgIJbLjSatwvm3rQw0M4NnU3KWV2TQ"></script>
       {% else %}
-        <script src="{{ "assets/js/plugins/" | relative_url }}imagesloaded.min.js"></script>
-        <script src="{{ "assets/js/plugins/" | relative_url }}{{ layout.script }}.min.js"></script>
+        {% for script in page.script %}
+          {{ script | prepend: 'plugins/' | javascript }}
+        {% endfor %}
       {% endif %}
-    {% endif %}-->
+    {% endif %}
 
     {% javascript main %}
 

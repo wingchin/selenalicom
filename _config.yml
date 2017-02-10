@@ -44,6 +44,7 @@ defaults:
       type:       schedule
     values:
       layout:     post-schedule
+      script:     maps
   - scope:
       type:       press
     values:
