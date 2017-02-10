@@ -1,9 +1,9 @@
 ---
-title:          "Ghost Dragon of Cold Mountain"
-genre:          "ancient"
-chinesetitle:   "寒山潛龍"
+title:          Ghost Dragon of Cold Mountain
+genre:          ancient
+chinesetitle:   寒山潛龍
 previoustitle:  "Cold Mountain, Hidden Dragon"
-episodes:       "30"
+episodes:       30
 producer:       "Marco Law"
 broadcaststart: 2014-06-30
 broadcastend:   2014-08-07
@@ -14,5 +14,5 @@ fullname:       "Tou Fa / Yan Mei-Neung"
 altname:        "Kong Man / Kong Lai"
 identity:       "Owner of Tou Fa Lam restaurant / Courtesan at Fa Lei Lau brothel"
 appearance:     "1-30"
-image:          "yes"
+image:          1
 ---
