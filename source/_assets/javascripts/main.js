@@ -92,34 +92,37 @@ $('#myTab a').click(function (e) {
 /*
 ==============================
 
-  INSTAFEED
+  FB FEED
 
 ==============================
 */
-if ($('#instafeed').length) {
-  var feed = new Instafeed({
-    clientId: '40ad1c9fce424950a42a335b9fa42e59',
-    accessToken:'575570396.40ad1c9.985e0b416bff4243b2ffd47219e41a9d',
-    get: 'user',
-    userId: 575570396,
-    template: '<figure class="item col-md-2">' +
+if ($('#fbfeed').length) {
+  $.getJSON('https://graph.facebook.com/401954999912036/photos?access_token=766464950145722|U5qfHX3LPjP2ru4Rj4MdHjlFfI4&limit=4&fields=name,link,images', function(json) {
+    var photoList = '';
+
+    for (var i = 0; i < 4; i++) {
+      var data = json.data[i];
+      var last = data.images.length - 3;
+
+      photo = '<figure class="item col-sm-3">' +
                 '<figcaption class="hover">' +
-                  '<a href="{{link}}">' +
+                  '<a href="' + data.link + '" target="_blank">' +
                     '<div class="block text-center">' +
-                      /*'<h3 class="hidden-xs">{{caption}}</h3>' +
-                      '<span class="line hidden-xs"></span>' +*/
-                      '<h3>&hearts; {{likes}}</h3>' +
+                      '<h3 class="hidden-xs">' + (data.name ? data.name : '') + '</h3>' +
                     '</div>' +
                   '</a>' +
                 '</figcaption>' +
-                '<img src="{{image}}" class="img-responsive" width="100%" height="100%" alt="">' +
-              '</figure>',
-    limit: 12,
-    resolution: 'thumbnail'
-  });
+                '<img src="' + data.images[last].source + '" width="100%" height="100%" alt="" />' +
+              '</figure>';
 
-  feed.run();
-}
+      photoList += photo;
+    }
+
+    $('#fbfeed').append(photoList);
+  }).done( function() {
+    $('#fbfeed img').height($('#fbfeed .item').width());
+  });
+};
 
 
 /*

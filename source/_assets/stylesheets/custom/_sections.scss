@@ -236,38 +236,22 @@ footer {
 /*
 ==============================
 
-  INSTAFEED
+  FB FEED
 
 ==============================
 */
 
-#instafeed .item {
-  padding-left: 0;
-  padding-right: 0;
+#fbfeed .item {
+  padding: 0;
 
-  h3, h4 {
+  h3 {
     color: $white;
     font-weight: 400;
-    margin: 0 0 0 3px;
+    font-size: $font-size-base - 2;
   }
-  h3 { font-size: $font-size-base - 2; }
-  h4 { font-size: $font-size-small; }
 
-  .line { background-color: $white; }
+  img { object-fit: cover; }
 }
-
-@media(max-width: $screen-xs-max) {
-  #instafeed .item {
-    h4 { font-size: $font-size-base; }
-  }
-}
-
-@media(min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-  #instafeed .item {
-    &:last-child { display: none; }
-  }
-}
-
 
 /*
 ==============================
