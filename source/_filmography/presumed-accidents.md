@@ -1,7 +1,7 @@
 ---
 title:          Presumed Accidents
 genre:          modern
-chinesetitle:   纯熟意外
+chinesetitle:   純熟意外
 previoustitle:  Skillful Accident
 episodes:       28
 producer:       Andy Chan

@@ -6,4 +6,5 @@
   map:        '22.3308803, 114.160076'
   attendees:  'Vincent Wong, Eliza Sam, <mark>Selena Lee</mark>, Rachel Kan, Cheung Kwok-Keung, Toby Chan, Matthew Ho, Ching Hor Wai, Producer Law Chun-Ngok'
   drama:      Brick Slaves
+  image:      yes
 ---

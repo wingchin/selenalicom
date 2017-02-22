@@ -252,24 +252,7 @@ footer {
 
   img { object-fit: cover; }
 }
-@media(min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-  #fbfeed .item {
-    &:last-child { display: none; }
-  }
-}
 
-/*
-==============================
-
-  LATEST DRAMAS
-
-==============================
-*/
-@media(min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-  #dramas > .col-* {
-    &:last-child { display: none; }
-  }
-}
 
 /*
 ==============================
@@ -311,6 +294,23 @@ footer {
 /*
 ==============================
 
+  HOMEPAGE EXTRA ITEM
+
+==============================
+*/
+@media(min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  #dramas > .col-sm-4:last-child { display: none; }
+}
+
+@media(min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  #fbfeed .item {
+    &:last-child { display: none; }
+  }
+}
+
+/*
+==============================
+
   CLEARFIX
 
 ==============================
@@ -321,5 +321,11 @@ footer {
   }
   @media (min-width: $screen-md-min) {
     .col-md-4:nth-child(3n+1) { clear:left; }
+  }
+}
+
+#events {
+  @media (min-width: $screen-md-min) {
+    .col-md-6:nth-child(odd) { clear:left; }
   }
 }
