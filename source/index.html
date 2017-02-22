@@ -18,13 +18,16 @@ home:       true
 <section class="grid-area default-padding">
   <div class="container">
     <h3>Latest dramas</h3>
-    <div class="row">
+    <div id="dramas" class="row">
       {% include item-filmography.html limit="4" %}
     </div>
   </div>
 </section>
 
 <section class="no-padding">
+  <div class="container">
+    <h3>Facebook updates</h3>
+  </div>
   <div class="container-fluid">
     <div id="fbfeed" class="row"></div>
   </div>
@@ -43,12 +46,12 @@ home:       true
   <div class="container">
     <div class="row">
 
-      <div class="col-md-7">
+      <div class="col-sm-7">
         <h3>From the Press</h3>
         {% include item-press.html limit="4" %}
       </div>
 
-      <div class="col-md-5">
+      <div class="col-sm-5">
         <h3>Featured video</h3>
         {% include item-beauty.html limit="1" %}
       </div>

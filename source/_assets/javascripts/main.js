@@ -104,7 +104,7 @@ if ($('#fbfeed').length) {
       var data = json.data[i];
       var last = data.images.length - 3;
 
-      photo = '<figure class="item col-sm-3">' +
+      photo = '<figure class="item col-sm-4 col-md-3">' +
                 '<figcaption class="hover">' +
                   '<a href="' + data.link + '" target="_blank">' +
                     '<div class="block text-center">' +

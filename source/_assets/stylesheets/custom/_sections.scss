@@ -252,6 +252,24 @@ footer {
 
   img { object-fit: cover; }
 }
+@media(min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  #fbfeed .item {
+    &:last-child { display: none; }
+  }
+}
+
+/*
+==============================
+
+  LATEST DRAMAS
+
+==============================
+*/
+@media(min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  #dramas > .col-* {
+    &:last-child { display: none; }
+  }
+}
 
 /*
 ==============================
