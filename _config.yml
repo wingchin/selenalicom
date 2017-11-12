@@ -8,7 +8,6 @@ destination:      ./build
 layouts_dir:      _jekyll/_layouts
 includes_dir:     _jekyll/_includes
 data_dir:         _jekyll/_data
-plugins_dir:      _jekyll/_plugins
 collections:
   beauty:
     output:       true
@@ -52,7 +51,7 @@ defaults:
 
 # Plugins
 assets:
-  cache:          false
+  caching:        false
   sources:
                   - _assets/javascripts
                   - _assets/stylesheets
