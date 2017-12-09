@@ -94,6 +94,20 @@
       {% endif %}
     </section>
 
+    <!-- Breadcrumbs
+    =================================== -->
+    {% unless page.home %}
+    <section class="white">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="{{ site.baseurl }}/">Home</a></li>
+          {% if page.layout != 'base' %}<li><a href="{{ site.baseurl }}/{{ page.collection }}">{{ page.collection | capitalize }}</a></li>{% endif %}
+          <li class="active">{{ page.title }}</li>
+        </ol>
+      </div>
+    </section>
+    {% endunless %}
+
 
     <!-- Content
     =================================== -->

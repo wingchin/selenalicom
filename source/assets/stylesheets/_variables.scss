@@ -155,7 +155,7 @@ $table-border-color:            #ddd !default;
 $btn-font-weight:                normal !default;
 
 $btn-default-color:              $brand-primary !default; // #333
-$btn-default-bg:                 transparent !default; // #fff
+$btn-default-bg:                 #fff !default;
 $btn-default-border:             $brand-primary !default; // #ccc
 
 $btn-primary-color:              $white !default; // #fff
@@ -797,14 +797,14 @@ $badge-border-radius:         10px !default;
 //
 //##
 
-$breadcrumb-padding-vertical:   8px !default;
-$breadcrumb-padding-horizontal: 15px !default;
+$breadcrumb-padding-vertical:   28px !default; //8px
+$breadcrumb-padding-horizontal: 0px !default; //15px
 //** Breadcrumb background color
-$breadcrumb-bg:                 #f5f5f5 !default;
+$breadcrumb-bg:                 transparent !default; //#f5f5f5
 //** Breadcrumb text color
 $breadcrumb-color:              #ccc !default;
 //** Text color of current page in the breadcrumb
-$breadcrumb-active-color:       $gray-light !default;
+$breadcrumb-active-color:       $brand-primary !default; //$gray-light
 //** Textual separator for between breadcrumb elements
 $breadcrumb-separator:          "/" !default;
 

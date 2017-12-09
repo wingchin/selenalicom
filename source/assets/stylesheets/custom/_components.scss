@@ -89,7 +89,7 @@
   border-width: 2px;
   transition: all .3s ease-in-out;
 
-  &-default:hover {
+  &-default:hover, &-default.active, &-default.active:hover {
     background-color: $brand-primary;
     color: $white;
     border-color: $brand-primary;
@@ -98,6 +98,31 @@
     background-color: $white;
     color: $brand-primary;
     border-color: $brand-primary;
+  }
+}
+
+/*
+==============================
+
+  BREADCRUMBS
+
+==============================
+*/
+.breadcrumb {
+  margin-bottom: 0;
+  font-family: $headings-font-family;
+
+
+  li {
+    font-size: $font-size-small + 1;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    &:first-child { font-weight: 400; }
+    &.divider { padding-right: 5px; }
+
+    a.active { color: $brand-primary; }
   }
 }
 

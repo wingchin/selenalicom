@@ -6,6 +6,12 @@
   background-color: $white;
   border-bottom: 1px solid #d8dadc;
 }
+.black {
+  background-color: $black;
+  border-top: 1px solid $white;
+
+  h3 { color: $white; }
+}
 
 /*
 ==============================
