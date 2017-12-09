@@ -13,7 +13,7 @@
   display: table;
   width: 100%;
   height: 50%;
-  background: #e6e7f3 url(asset_path('header.jpg')) no-repeat top center scroll;
+  background: #e6e7f3 url('../images/header.jpg') no-repeat top center scroll;
   background-size: cover;
 
   &.full { height: 100%; }

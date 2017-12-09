@@ -14,11 +14,11 @@
 
     {% if page.style %}
       {% for style in page.style %}
-        {{ style | prepend: 'plugins/' | stylesheet }}
+        <link rel="stylesheet" href="{{ site.baseurl }}/assets/stylesheets/plugins/{{ style }}.css">
       {% endfor %}
     {% endif %}
 
-    {% stylesheet main %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/stylesheets/main.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -41,7 +41,7 @@
               <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand" href="{{ "/" | relative_url }}">
-              {% image logo.png alt="{{ site.title }}" %}
+              <img src="{{ site.baseurl }}/assets/images/logo.png" alt="{{ site.title }}">
             </a>
           </div>
 
@@ -124,6 +124,7 @@
 
     <!-- Foot
     =================================== -->
+    <!-- SCRIPTS -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     {% if page.script %}
@@ -132,15 +133,15 @@
            // The latitude and longitude of the location
           var position = [{{ page.map }}];
         </script>
-        <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyADkWgIJbLjSatwvm3rQw0M4NnU3KWV2TQ"></script>
+        <script src="//maps.googleapis.com/maps/api/ zs?key=AIzaSyADkWgIJbLjSatwvm3rQw0M4NnU3KWV2TQ"></script>
       {% else %}
         {% for script in page.script %}
-          {{ script | prepend: 'plugins/' | javascript }}
+          <script src="{{ site.baseurl }}/assets/scripts/plugins/{{ script }}.js"></script>
         {% endfor %}
       {% endif %}
     {% endif %}
 
-    {% javascript main %}
+    <script src="{{ site.baseurl }}/assets/scripts/main.js"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
