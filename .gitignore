@@ -1,3 +1,4 @@
+build
 .asset-cache
 .sass-cache
-build
+.jekyll-metadata

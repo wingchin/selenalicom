@@ -3,60 +3,75 @@
 # =============================================
 
 # Where things are
-source:           ./source
-destination:      ./build
-layouts_dir:      _jekyll/_layouts
-includes_dir:     _jekyll/_includes
-data_dir:         _jekyll/_data
+source:                 source
+destination:            build
+layouts_dir:            _jekyll/_layouts
+includes_dir:           _jekyll/_includes
+data_dir:               _jekyll/_data
+plugins_dir:            _jekyll/_plugins
+
+sass:
+  sass_dir:             assets/stylesheets
+  style:                compressed
+
 collections:
   beauty:
-    output:       true
+    output:             true
   filmography:
-    output:       true
+    output:             true
   schedule:
-    output:       true
+    output:             false
   press:
-    output:       true
+    output:             false
+
+# Handling reading
+strict_front_matter:    true
+
+# Conversion
+markdown:               kramdown
+
+# Custom metadata
+baseurl:                ''
 
 # Outputting
-permalink:        pretty
+permalink:              pretty
 defaults:
   - scope:
-      type:       pages
+      type:             pages
     values:
-      layout:     base
+      layout:           base
   - scope:
-      type:       beauty
+      type:             beauty
     values:
-      layout:     post-beauty
+      layout:           post-beauty
   - scope:
-      type:       filmography
+      type:             filmography
     values:
-      layout:     post-filmography
+      layout:           post-filmography
       style:
-                  - lity
-                  - unslider
+                        - lity
+                        - unslider
       script:
-                  - lity
-                  - unslider
+                        - lity
+                        - unslider
   - scope:
-      type:       schedule
+      type:             schedule
     values:
-      layout:     post-schedule
-      script:     maps
+      layout:           post-schedule
+      script:           maps
   - scope:
-      type:       press
+      type:             press
     values:
-      layout:     post-press
+      layout:           post-press
 
 # Plugins
 assets:
-  caching:        false
+  caching:              false
   sources:
-                  - _assets/javascripts
-                  - _assets/stylesheets
-                  - _assets/images
-                  - _assets/uploads
+                        - _assets/javascripts
+                        - _assets/stylesheets
+                        - _assets/images
+                        - _assets/uploads
 
 # =============================================
 # Site metadata
