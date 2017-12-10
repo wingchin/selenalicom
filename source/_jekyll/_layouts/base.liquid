@@ -37,7 +37,8 @@
 
           <!-- Brand and toggle -->
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
               <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand" href="{{ "/" | relative_url }}">
@@ -46,7 +47,7 @@
           </div>
 
           <!-- Nav links -->
-          <div class="collapse navbar-collapse navbar-right">
+          <div class="collapse navbar-collapse navbar-right" id="navbar-collapse">
             <ul class="nav navbar-nav">
               {% assign menuitems = site.pages | sort: 'nav' %}
               {% for i in menuitems %}
@@ -140,6 +141,7 @@
     =================================== -->
     <!-- SCRIPTS -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     {% if page.script %}
       {% if page.script == 'maps' %}
