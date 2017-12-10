@@ -4,17 +4,17 @@ layout: base
 <section id="video-post" class="default-padding">
   <div class="container">
     <div class="row">
-      <div class="col-md-7 col-lg-8">
+      <div class="col-sm-7">
         <div class="embed-responsive embed-responsive-16by9">
-          <iframe width="640" height="360" src="//www.youtube-nocookie.com/embed/{{ page.videoID }}?theme=light&amp;color=white&amp;rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+          <iframe id="ytplayer" type="text/html" width="640" height="360"
+  src="https://www.youtube.com/embed/{{ page.videoID }}?color=white&rel=0&showinfo=0" frameborder="0"></iframe>
         </div>
       </div>
-      <div class="details col-md-5 col-lg-4">
+      <div class="details col-sm-5">
         <h2>{{ page.title }}</h2>
         <h6>{{ page.date | date: "%B %e, %Y" }}</h6>
         <span class="line left"></span>
         <p class="small-padding">{{ page.description }}</p>
-        <a href="http://www.youtube.com/watch?v={{ page.videoID }}" class="btn btn-default">Watch on YouTube</a>
       </div>
     </div>
   </div>
