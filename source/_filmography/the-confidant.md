@@ -11,7 +11,7 @@ website:        'http://programme.tvb.com/drama/theconfidant'
 starring:       Wayne Lai, Michelle Yim, Maggie Siu, Raymond Wong, Aimee Chan, Raymond Cho, Nancy Wu, Natalie Tong, Power Chan, Edwin Siu
 synopsis:       LEE LIN-YIN <small>(Wayne Lai)</small> and ON TAK-HOI <small>(Raymond Cho)</small> came from poor families and were sold to become palace eunuchs at a young age. The two later become apprentices of senior eunuch LAU DOR-SAN <small>(King Sir)</small> and developed a deep brotherly relationship. Both became important high ranked officials for EMPRESS DOWAGER CIXI <small>(Michelle Yim)</small>. Unfortunately, Tak Hoi had a heart of greed and eventually his relationship with the careful Lin Yin started drifting apart. Chan Fuk <small>(Elliot Ngok)</small> is the head of the eununchs, but he saw he was losing his authority because Lin Yin and Tak Hoi won the Empress’ favor. He started plotting against the two, but Lin Yin was fortunate to have palace maid SIN YUNG <small>(Nancy Wu)</small> and the eunuch pharmacist, YIU SEUNG-HEI’s <small>(Raymond Wong)</small> assistance. Meanwhile, it’s time for EMPEROR TONGZI <small>(Oscar Leung)</small> to choose his empress, which worried EMPRESS DOWAGER CI’AN <small>(Maggie Siu)</small> that Cixi may get even more powerful. She joins forces with the Grand Prince <small>(KK Cheung)</small> to drive Cixi into an isolated and helpless position.
 
-fullname:       Sok Cheuk Lok Yuen
+fullname:       Sok Cheuk Lok-Yuen
 altname:        Imperial Consort Yuen
 identity:       Bin (Qing-style imperial consort)
 appearance:     1-5
