@@ -1,6 +1,16 @@
 //= require bootstrap/transition
 //= require bootstrap/tab
 
+/*
+==============================
+
+  IMAGES LAZY LOAD
+
+==============================
+*/
+$('img[data-src]').each(function() {
+  $(this).attr('src', $(this).data('src'));
+});
 
 /*
 ==============================
@@ -133,25 +143,27 @@ if ($('#fbfeed').length) {
 ==============================
 */
 if ($('#isotope-grid').length) {
-  var $container = $('#isotope-grid .container > .row').isotope({
-    filter: '*',
-    layoutMode: 'fitRows'
-  });
-
-  // Filter on button click
-  $('#filter button').on( 'click', function() {
-    var selector = $(this).attr('data-filter');
-    $container.isotope({
-      filter: selector,
+  $(window).load( function() {
+    var $container = $('#isotope-grid .container > .row').isotope({
+      filter: '*',
       layoutMode: 'fitRows'
     });
-  });
 
-  // Change active class on buttons
-  $('.btn-group').each( function( i, buttonGroup ) {
-    $( buttonGroup ).on( 'click', 'button', function() {
-      $( buttonGroup ).find('.active').removeClass('active');
-      $( this ).addClass('active');
+    // Filter on button click
+    $('#filter button').on( 'click', function() {
+      var selector = $(this).attr('data-filter');
+      $container.isotope({
+        filter: selector,
+        layoutMode: 'fitRows'
+      });
+    });
+
+    // Change active class on buttons
+    $('.btn-group').each( function( i, buttonGroup ) {
+      $( buttonGroup ).on( 'click', 'button', function() {
+        $( buttonGroup ).find('.active').removeClass('active');
+        $( this ).addClass('active');
+      });
     });
   });
 }

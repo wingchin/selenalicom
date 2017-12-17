@@ -64,14 +64,6 @@ defaults:
     values:
       layout:           post-press
 
-# Plugins
-assets:
-  caching:              false
-  sources:
-                        - _assets/javascripts
-                        - _assets/stylesheets
-                        - _assets/images
-                        - _assets/uploads
 
 # =============================================
 # Site metadata
