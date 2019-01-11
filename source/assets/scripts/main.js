@@ -8,8 +8,10 @@
 
 ==============================
 */
-$('img[data-src]').each(function() {
-  $(this).attr('src', $(this).data('src'));
+$(document).ready(function() {
+  $('img[data-src]').each(function() {
+    $(this).attr('src', $(this).data('src'));
+  });
 });
 
 /*
@@ -71,7 +73,7 @@ $('#back-to-top').click(function() {
 ==============================
 */
 $(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
+  $('.btn-scroll').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -133,54 +135,6 @@ if ($('#fbfeed').length) {
     $('#fbfeed img').height($('#fbfeed .item').width());
   });
 };
-
-
-/*
-==============================
-
-  ISOTOPE
-
-==============================
-*/
-if ($('#isotope-grid').length) {
-  $(window).load( function() {
-    var $container = $('#isotope-grid .container > .row').isotope({
-      filter: '*',
-      layoutMode: 'fitRows'
-    });
-
-    // Filter on button click
-    $('#filter button').on( 'click', function() {
-      var selector = $(this).attr('data-filter');
-      $container.isotope({
-        filter: selector,
-        layoutMode: 'fitRows'
-      });
-    });
-
-    // Change active class on buttons
-    $('.btn-group').each( function( i, buttonGroup ) {
-      $( buttonGroup ).on( 'click', 'button', function() {
-        $( buttonGroup ).find('.active').removeClass('active');
-        $( this ).addClass('active');
-      });
-    });
-  });
-}
-
-
-/*
-==============================
-
-  UNSLIDER
-
-==============================
-*/
-if ($('.my-slider').length) {
-  $(document).ready(function($) {
-    $('.my-slider').unslider();
-  });
-}
 
 
 /*

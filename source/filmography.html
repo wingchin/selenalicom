@@ -2,21 +2,8 @@
 title:      Filmography
 subtitle:   Television dramas and movies
 nav:        2
-
-script:     isotope
 ---
-<section id="isotope-grid" class="grid-area default-padding clearfix">
-  <div id="filter" class="small-padding">
-    <form class="container text-center">
-      <label for="sort">Filter ({{ site.filmography | size }}) by genre:</label>
-      <div class="btn-group btn-group-sm" role="group" aria-label="Genres">
-        <button type="button" class="btn btn-default active" data-filter="*">All</button>
-        <button type="button" class="btn btn-default" data-filter=".ancient">Ancient</button>
-        <button type="button" class="btn btn-default" data-filter=".modern">Modern</button>
-        <button type="button" class="btn btn-default" data-filter=".pre-modern">Pre-modern</button>
-      </div>
-    </form>
-  </div>
+<section class="grid-area default-padding clearfix">
   <div class="container">
     <div class="row">
       {% include item-filmography.html %}

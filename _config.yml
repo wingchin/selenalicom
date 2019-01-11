@@ -48,12 +48,6 @@ defaults:
       type:             filmography
     values:
       layout:           post-filmography
-      style:
-                        - lity
-                        - unslider
-      script:
-                        - lity
-                        - unslider
   - scope:
       type:             schedule
     values:
