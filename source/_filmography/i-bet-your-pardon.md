@@ -1,5 +1,5 @@
 ---
-title:          Fraudster in Hollywood
+title:          I Bet Your Pardon
 genre:          pre-modern
 chinesetitle:   荷里活有個大老千
 previoustitle:  
@@ -9,7 +9,7 @@ unreleased:		true
 broadcaststart: 2018-12-30
 broadcastend:   
 website:        
-starring:       Paul Chun, Kent Cheng, Kent Tong, <mark>Selena Lee</mark>, Babyjohn Choi, Dominic Ho, Connie Man, Akina Hong, Angie Cheong, James Ng, Ada Wong, Jacqueline Chong
+starring:       Kent Cheng, <mark>Selena Lee</mark>, Dominic Ho, Ada Wong, Angie Cheong
 synopsis:       
 
 fullname:       Ma Lei-Lin (Marilyn)
