@@ -12,7 +12,7 @@ starring:       Steven Ma, Kenneth Ma, Power Chan, <mark>Selena Lee</mark>, Nata
 synopsis:       Martial arts expert NIP DOR-PO <small>(Steven Ma)</small> joins the Imperial Guard in an attempt to speak up for the people. He is under the command of Prince Yu, FUQUAN <small>(Kenneth Ma)</small>, whom he becomes very good friends with in the passing of time. Later, on Chuen’s recommendation, he becomes the personal guard of Fuquan’s younger brother EMPEROR KANGXI <small>(Power Chan)</small>.</p><p>Never has Po expected that the palace is a place so full of plotting and intrigue. Nor did he know that Fuquan has long been harboring an earthshaking rebellious scheme. Po likes CHEUK CHI-YING <small>(Selena Lee)</small>, but she soon gets involved in a power struggle amongst the imperial concubines. Surrounded by friends and foes, cheating and masking, Po finds himself being forced to fight in the dark on his own…
 
 fullname:       Cheuk Chi-Ying
-altname:        Princess Duanmin
+altname:        Oi San Gok Loh · Duen Man (Princess Duen Man)
 age:            25"
 identity:       Properietor of Bak Hei Tong Pharmacy
 appearance:     2-26
