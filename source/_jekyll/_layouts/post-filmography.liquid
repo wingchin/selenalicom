@@ -145,18 +145,3 @@ layout: base
   </div>
 </section>
 -->
-
-{% assign events = site.schedule | where: 'drama', page.title %}
-{% for event in events %}
-  {% if events %}
-    <section class="grid-area default-padding">
-      <div class="container">
-        <h3 class="text-center">Related events</h3>
-        <div class="row">
-          {% include item-schedule.html related="true" %}
-        </div>
-      </div>
-    </section>
-    {% break %}
-  {% endif %}
-{% endfor %}
