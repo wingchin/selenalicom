@@ -58,6 +58,9 @@ defaults:
     values:
       layout:           post-press
 
+plugins:
+  - jekyll-sitemap
+
 
 # =============================================
 # Site metadata
