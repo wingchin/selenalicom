@@ -1,11 +1,10 @@
 ---
-title:          Golden Building
+title:          Barrack O'Karma
 genre:          modern
 chinesetitle:   金宵大廈
-previoustitle:  The Exorcist’s Meter
+previoustitle:  Golden Building
 episodes:       10
-producer:       Yip Chun-fai
-unreleased:		true
+producer:       Yip Chun-Fai
 broadcaststart: 2019-12-12
 broadcastend:   
 website:        
