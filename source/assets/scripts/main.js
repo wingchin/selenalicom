@@ -104,42 +104,6 @@ $('#myTab a').click(function (e) {
 /*
 ==============================
 
-  FB FEED
-
-==============================
-*/
-if ($('#fbfeed').length) {
-  $.getJSON('https://graph.facebook.com/401954999912036/photos?access_token=766464950145722|U5qfHX3LPjP2ru4Rj4MdHjlFfI4&limit=4&fields=name,link,images', function(json) {
-    var photoList = '';
-
-    for (var i = 0; i < 4; i++) {
-      var data = json.data[i];
-      var last = data.images.length - 3;
-
-      photo = '<figure class="item col-sm-4 col-md-3">' +
-                '<figcaption class="hover">' +
-                  '<a href="' + data.link + '" target="_blank">' +
-                    '<div class="block text-center">' +
-                      '<h3 class="hidden-xs">' + (data.name ? data.name : '') + '</h3>' +
-                    '</div>' +
-                  '</a>' +
-                '</figcaption>' +
-                '<img src="' + data.images[last].source + '" width="100%" height="100%" alt="" />' +
-              '</figure>';
-
-      photoList += photo;
-    }
-
-    $('#fbfeed').append(photoList);
-  }).done( function() {
-    $('#fbfeed img').height($('#fbfeed .item').width());
-  });
-};
-
-
-/*
-==============================
-
   GOOGLE MAPS
   http://www.labnol.org/internet/embed-google-maps-background/28457/
 
