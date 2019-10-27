@@ -1,19 +1,28 @@
 ---
 title:          Ghost Dragon of Cold Mountain
-genre:          ancient
-chinesetitle:   寒山潛龍
-previoustitle:  Cold Mountain, Hidden Dragon
-episodes:       30
-producer:       Marco Law
-broadcaststart: 2014-06-30
-broadcastend:   2014-08-07
-website:        'http://programme.tvb.com/drama/ghostdragonofcoldmountain'
-starring:       Kenneth Ma, Pierre Ngo, Power Chan, <mark>Selena Lee</mark>, Rosina Lin, Raymond Cho
-synopsis:       The Tin Kei Agency of the Northern Song, an investigation agency specializing in solving strange cases in the kingdom, is headed by the wise FUNG NAM-TIN <small>(Lau Kong)</small>, who leads a group of extremely well-trained constables. His favorite apprentice, CHU CHEUNG-SING <small>(Kenneth Ma)</small>, is wisdom and courage embodied in one, but Nam Tin and Cheung Sing end their partnership when they fail to come to a consensus on how to solve a particular case. Cheung Sing ends up leaving the agency to live a simple and peaceful life with his wife, TOU FA <small>(Selena Lee)</small>.  years later, the aging Nam Tin orders three of his most-skilled apprentices – MA CHUEN-KUNG <small>(Power Chan)</small>, NGAU DAI-LIK <small>(Pierre Ngo)</small>, and YEUNG MAU <small>(Rosina Lin)</small> – to reach out to Cheung Sing and convince him to return. Cheung Sing agrees to work with the agency again, but his personality often clashes with his three partners, causing the four to frequently fight. Meanwhile, Cheung Sing is separated from his wife, but his feelings become conflicted when he ends up meeting a prostitute who looks exactly like her.  Sing learns that the opposing Jurchen kingdom has placed a mole within the Tin Kei Agency and his good friend, HUNG SUP-KAU <small>(Raymond Cho)</small> is exploited by the enemy. Cheung Sing does not know whom to trust. The line between friend and foe continues to be blurry.
 
-fullname:       To Fa<br>Yan Mei-Neung
-altname:        Kong Man<br>Kong Lai
-identity:       Owner of Tou Fa Lam restaurant<br>Courtesan at Fa Lei Lau brothel
-appearance:     1-30
-image:          1
+names:
+  chinese:      寒山潛龍
+  previous:     Cold Mountain, Hidden Dragon
+genre:          ancient
+episodes:       30
+broadcast:
+  start:        2014-06-30
+  end:          2014-08-07
+producer:       Marco Law
+starring:       Kenneth Ma, <mark>Selena Lee</mark>, Rosina Lin, Power Chan, Pierre Ngo
+synopsis:       During the Northern Song Dynasty, Phecda Bureau led by FUNG NAM-TIN (Lau Kong) along with his elite group is in charge of all the mysterious criminal cases nationwide. Its power is superior to all the other government offices, and even surpasses the Six Ministries. Commander CHU CHEUNG-SING (Kenneth Ma) is brave and intelligent, and is greatly valued by his mentor Nam-Tin. However, due to a robbery case, he and his mentor have a disagreement and split up, going their separate ways. Bringing along his wife TAO FA (Selena Lee), Cheung-Sing has vanished from sight for almost ten years until recently when the case draws to a close. As Nam-Tin is in his advanced age, Field Officer MA CHUEN-KUNG (Power Chan), NGAU TAI-LIK (Pierre Ngo) and YEUNG MAU (Rosina Lin) are under orders to summon Cheung-Sing back. Although the four of them jointly solve cold cases one by one, their distinctive personalities often lead to conflicts among them.<br> Unexpectedly, Tao Fa and Cheung-Sing diverge from each other as a result of a misunderstanding. After that, Cheung-Sing encounters a famous prostitute YAN MEI-LEUNG (Selena Lee), who bears the same resemblance to his wife and takes Cheung-Sing’s breath away. In the meantime, the Jin Dynasty has long been coveting the Song land, and is ready to launch an invasion. Cheung-Sing notices that the Jin spies have penetrated into the Bureau, whereas his best friend, gangster HUNG SAP-KAU (Raymond Cho), has also been taken advantage of. With those surrounding him being in danger one after another, it’s difficult to define friends or foes, rendering everyone on tenterhooks...
+role:           lead
+
+characters:
+  -
+    fullname:       Tao Fa
+    altname:        Kong Lai
+    identity:       Owner of Tao Fa Lam restaurant
+    appearance:     1-30
+  -
+    fullname:       Yan Mei-Neung
+    altname:        Kong Man
+    identity:       Courtesan at Fa Lei Lau brothel
+    appearance:     1-30
 ---

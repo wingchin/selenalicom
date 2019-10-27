@@ -1,17 +1,22 @@
 ---
 title:          Succession War
-genre:          ancient
-chinesetitle:   天命
-previoustitle:  Heaven’s Will
-episodes:       28
-producer:       Chong Wai-Kin
-broadcaststart: 2018-06-25
-broadcastend:   2018-07-29
-website:        http://programme.tvb.com/drama/successionwar
-synopsis:       The rise and fall of dynasties and the changing of sovereigns are dictated by the Mandate of Heaven. HESHEN <small>(Ruco Chan)</small> dominates the court, with power in his hands and wealth that rivals the nation. He is a minister that is closer to imperial power than the Emperor. Emperor JIAQING <small>(Shaun Tam)</small> has the title, but no power; he falls victim to the times. He is a ruler that is further from power than ordinary citizens. Within 28 days, a battle between power and righteousness. Ultimately, will man prevail over the heavens, or is the Mandate of Heaven not to be violated?
 
-fullname:       Nau Woo Luk · Ling-Yee
-altname:		Imperial Noble Consort, Empress Haau Woh Yui
-identity:       Empress
-appearance:		1-28
+names:
+  chinese:      天命
+  previous:     Heaven’s Will
+genre:          ancient
+episodes:       28
+broadcast:
+  start:        2018-06-25
+  end:          2018-07-29
+producer:       Chong Wai-Kin
+starring:       Ruco Chan, Shaun Tam, <mark>Selena Lee</mark>, Natalie Tong, Elaine Yiu, Joel Chan
+synopsis:       HESHEN (Ruco Chan), brilliant and favoured by Emperor QIANLONG, has influence over the throne. He forges extensive factional alliances for shared venality and is dubbed the “Second Emperor”. Prince YONGYAN (Shaun Tam), the 15th son of the Emperor, appears mediocre with no ambition, so is selected by HESHEN as first line to the throne. After the death of Qianlong in the 4th year of Emperor JIAQING’s reign, Jiaqing manages to convince Heshen’s son FENGSHEN-YINDE (Matthew Ho) and confidant FUCHANG’AN (Joel Chan) to turn their coat, seeking to sweepingly eliminate Heshen and his cronies. But, wily Heshen comes prepared. Facing Jiaqing’s attacks, he not only manages to solve this crisis, but also turns the tables, exposing the unspeakable secret of Royal Noble Consort (Selena Lee). Suddenly, Jiaqing is caught in the crossfire! Heshen’s second wife CHANG MEI (Elaine Yiu) and female confidant DOUKOU (Natalie Tong) act separately inside and outside the imperial court, turning Jiaqing’s longtime supporter / own brother Prince YONGLIN (Jonathan Cheung) into his enemy. With the White Lotus Sect wreaking havoc nationwide, Jiaqing is plugged into despair. However, he is a man with a mandate from heaven...
+role:           lead
+
+characters:
+  -
+    fullname:     Nau Woo Luk · Ling-Yee
+    identity:     Imperial Noble Consort
+    appearance:   1-28
 ---

@@ -1,17 +1,22 @@
 ---
 title:          Forensic Heroes IV
-genre:          modern
-chinesetitle:   法證先鋒IV
-episodes:       30
-producer:       Mui Siu-Ching
-broadcaststart: 2020-01-01
-broadcastend:   
-unreleased:     true
-website:        
-starring:       Raymond Wong, <mark>Selena Lee</mark>, Shaun Tam, Alice Chan, Rebecca Zhu, Roxanne Tong
-synopsis:       
 
-fullname:       Man Ga-Hei (Dr. Man)
-identity:       Senior Forensic
-appearance:     
+names:
+  chinese:      法證先鋒IV
+genre:          modern
+episodes:       30
+broadcast:
+  start:        2020-01-01
+  end:
+unreleased:     true
+producer:       Mui Siu-Ching
+starring:       Raymond Wong, <mark>Selena Lee</mark>, Shaun Tam, Alice Chan, Rebecca Zhu, Roxanne Tong
+synopsis:
+role:           lead
+
+characters:
+  -
+    fullname:       Man Ga-Hei
+    identity:       Senior Forensic
+    appearance:
 ---

@@ -1,4 +1,4 @@
-{% assign dramas = (site.filmography | sort: 'broadcaststart') | reverse %}
+{% assign dramas = (site.filmography | sort: 'broadcast.start') | reverse %}
 {% assign num = include.limit %}
 
 {% for i in dramas limit:num %}
@@ -12,11 +12,11 @@
           </span>
         </a>
       </div>
-      <img class="img-responsive" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAADCAQAAAAT4xYKAAAADklEQVR42mNkAAJGOAEAAC0ABNxMS2YAAAAASUVORK5CYII=" data-src="{{ site.baseurl }}/assets/uploads/filmography-poster-{{ i.slug }}.jpg" width="300" height="450" alt="{{ i.title }} poster">
+      <img class="img-responsive" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAADCAQAAAAT4xYKAAAADklEQVR42mNkAAJGOAEAAC0ABNxMS2YAAAAASUVORK5CYII=" data-src="{{ site.baseurl }}/assets/uploads/posters/filmography-poster-{{ i.slug }}.jpg" width="300" height="450" alt="{{ i.title }} poster">
     </div>
     <figcaption class="caption">
       <h4><a href="{{ i.url }}">{{ i.title }}</a></h4>
-      <p>{{ i.fullname }}</p>
+      <p>{% for c in i.characters %}{{ c.fullname }}{% if forloop.last == false %}, {% endif%}{% endfor %}</p>
     </figcaption>
   </figure>
 </div>

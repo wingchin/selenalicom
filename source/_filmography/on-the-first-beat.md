@@ -1,17 +1,22 @@
 ---
 title:          On the First Beat
-genre:          modern
-chinesetitle:   學警出更
-previoustitle:  The Academy II
-episodes:       30
-producer:       Wong Wai-Sing
-broadcaststart: 2007-06-04
-broadcastend:   2007-07-13
-website:        http://tvcity.tvb.com/drama/on_the_first_beat
-synopsis:       After going through the excruciating training of the academy, CHUNG LAP-MAN <small>(Ron Ng)</small> and LI PAK-KIU <small>(Sammul Chan)</small> finally become official police officers and are assigned into the same branch. One operation causes Kiu’s girlfriend to die a violent death. Furthermore, it causes Kiu and Man, this pair of good brothers, to separate from one another. Newly-appointed police chief CHEUNG GING-FUNG <small>(Michael Tao)</small> turns out to be the crime leader of last time’s operation. Kiu further discovers that there’s an inside story to his girlfriend’s death…</p><p>feelings between Man and his colleague CHEUNG NIM YAN <small>(Joey Yung)</small> gradually develop. However, his cousin MAN JING <small>(Kate Tsui)</small>, like before, pursues him. On the other hand, Kiu loves Fung’s ex-wife, YUEN WAI-NEI <small>(Sonija Kwok)</small>. However, the old feelings between Fung and Nei still haven’t ended. Facing the impact of career, friendship, and love, how will the two new officers deal with it all?
 
-fullname:       Yip Ling-Fung
-identity:       Bartender
-appearance:     21-29
-guest:          yes
+names:
+  chinese:      學警出更
+  previous:     The Academy II
+genre:          modern
+episodes:       30
+broadcast:
+  start:        2007-06-04
+  end:          2007-07-13
+producer:       Wong Wai-Sing
+starring:       Ron Ng, Sammul Chan, Michael Tao, Sonija Kwok, Joey Yung, Kate Tsui, Kenny Kwan
+synopsis:       After months of intensive training at the cadet school, CHUNG LAP-MAN (Ron Ng) and LEE PAK-KIU (Sammul Chan) have now become qualified police officers and are deployed to the same police station. Kiu’s girlfriend loses her life in a police operation, and the mishap also brings the friendship between Kiu and Man to a sharp end. It turns out that the newly appointed Sergeant CHEUNG KING-FUNG (Michael Tao) is the principal target of the abovementioned operation. Kiu even discovers that there is a chilling secret behind the death of his girlfriend. MAN has an ever-devoted admirer called MAN CHING (Kate Tsui), who is a cousin of his. Despite this, he has been going out with his colleague CHEUNG NIM-YAN (Joey Yung) and their relationship is progressing really well. Kiu falls in love with Fung’s ex-wife YUEN WAI-NI (Sonija Kwok), who nevertheless is still in close contact with Fung… Challenges of work, friendship and love are stretching the lads to the limit...
+role:               guest
+
+characters:
+  -
+    fullname:       Yip Ling-Fung
+    identity:       Beer promoter
+    appearance:     21-29
 ---

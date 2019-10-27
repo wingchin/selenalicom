@@ -1,16 +1,23 @@
 ---
 title:          Life Made Simple
+
+names:
+  chinese:      阿旺新傳
+  previous:     New Legend of Ah Wong
 genre:          modern
-chinesetitle:   阿旺新傳
-previoustitle:  New Legend of Ah Wong
 episodes:       32
-broadcaststart: 2005-10-24
-broadcastend:   2005-12-06
-producer:       Chong Wai-Kin
-website:        http://tvcity.tvb.com/drama/life_made_simple/
-synopsis:       30 years old TING SHEUNG WONG <small>(Roger Kwok)</small> has an IQ of a 7 years old little boy, however, he seems to find ways to make everyone around him happy and lucky. He has been friends with WONG KEI FUNG <small>(Jessica Hsuan)</small> before she went to United States to study. In order to fulfill Fung's high education wish, Wong gave Fung all his savings of many years. After Fung finished her studies and returned to hometown, she started working in Chung Si Group. In order to protect her, Wong also worked there as a mailman.  never expected that in Chung Si he would meet his half brother CHUNG CHI CHUNG <small>(Bosco Wong)</small> and his biological father CHUNG GAM WING <small>(Paul Chun)</small>. What made him surprise even more is that Fung, who he has always called 'wife', fell in love with Chung and later LOK KUI SING <small>(Raymond Cho)</small>. One with pure heart, would he be able to deal with the complicated adult world?
-fullname:       Yeung Yuen-Kwan (Joanna)
-altname:        Lui Lui
-appearance:     7-12, 32
-guest:          yes
+broadcast:
+  start:        2005-10-24
+  end:          2005-12-06
+producer:       Wong Wai-Sing
+starring:       Roger Kwok, Jessica Hsuan, Bosco Wong, Leila Tong
+synopsis:       TING SHEUNG-WONG (Roger Kwok) is a 30 years old man with the IQ of a seven years old boy. Ironically, he is surely happier than anyone else. WONG’s simple life ends when his best friend from childhood, WONG KEI-FUNG (Jessica Hsuan), goes to the U.S. to study. In order to realise Fung’s dream of studying abroad, Wong gives her all his savings. She works at the Chung’s International Company Limited after her study. He works as a delivery boy in the same company to keep an eye on her. Unexpectedly, Wong meets his half brother CHUNG CHI-CHUNG (Bosco wong) and his father CHUNG KAM-WING (Paul Chun) in the company. Even more to his surprise, Fung, whom he sees as his wife, falls in love with Chung and, subsequently, another man Lok Kui-Shing (Raymond Cho) accordingly. Can a simple mind handle a complicated world?
+role:           guest
+
+characters:
+  -
+    fullname:       Yeung Yuen-Kwan (Joanna)
+    altname:        Lui Lui
+    identity:       Sales manager at Chung Int. Company Ltd
+    appearance:     7-12, 32
 ---

@@ -3,125 +3,106 @@ layout: base
 ---
 <section id="filmography-post" class="default-padding">
   <div class="container">
-    <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+      <div class="well well-lg">
+        <div class="row">
+          <div class="col-sm-4">
+            <figure>
+              <img class="img-responsive" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAADCAQAAAAT4xYKAAAADklEQVR42mNkAAJGOAEAAC0ABNxMS2YAAAAASUVORK5CYII=" data-src="{{ site.baseurl }}/assets/uploads/posters/filmography-poster-{{ page.slug }}.jpg" width="300" height="450" alt="{{ i.title }} poster">
+            </figure>
+          </div>
 
-      <div class="col-sm-4 col-md-5 col-lg-4">
-        <div class="item">
-          <img class="img-responsive" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAADCAQAAAAT4xYKAAAADklEQVR42mNkAAJGOAEAAC0ABNxMS2YAAAAASUVORK5CYII=" data-src="{{ site.baseurl }}/assets/uploads/filmography-poster-{{ page.slug }}.jpg" width="300" height="450" alt="{{ page.title }} poster">
-        </div>
-      </div>
+          <div class="col-sm-8">
+            <div class="caption">
+              <h1>{{ page.title }}</h1>
+              <h4>{{ page.names.chinese }}</h4>
 
-      <div class="details col-sm-8 col-md-7 col-lg-8">
-        <h1>{{ page.title }}</h1>
-        {% if page.chinesetitle %}
-          <h5>{{ page.chinesetitle }} {% if page.previoustitle %}({{ page.previoustitle }}){% endif %}</h5>
-        {% endif %}
-
-        <div class="small-padding">
-          <div class="well well-lg">
-            <dl class="dl-horizontal">
-              {% unless page.unreleased %}<dt>Broadcast Date</dt>
-              <dd>{{ page.broadcaststart | date: "%B %e, %Y" }} - {{ page.broadcastend | date: "%B %e, %Y" }}</dd>{% endunless %}
-              <dt>Genre(s)</dt>
-              <dd>{{ page.genre | capitalize }}</dd>
-              <dt>Running Time</dt>
-              <dd>{{ page.episodes }} episodes</dd>
-              <!--<dt>Starring</dt>
-              <dd>{{ page.starring }}</dd>-->
-              <dt>Produced by</dt>
-              <dd>{{ page.producer }}</dd>
-            </dl>
-
-            <a class="btn btn-default" href="{{ page.website }}" target="_blank">Official Website</a>
+              <dl class="dl-horizontal">
+                {% unless page.unreleased %}<dt>Broadcast date</dt>
+                <dd>{{ page.broadcast.start | date: "%B %e, %Y" }} - {{ page.broadcast.end | date: "%B %e, %Y" }}</dd>{% endunless %}
+                <dt>Genre(s)</dt>
+                <dd>{{ page.genre | capitalize }}</dd>
+                <dt>Running time</dt>
+                <dd>{{ page.episodes }} episodes</dd>
+                <dt>Starring</dt>
+                <dd>{{ page.starring }}</dd>
+                <dt>Produced by</dt>
+                <dd>{{ page.producer }}</dd>
+              </dl>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
 {% if page.synopsis %}
-<section class="small-padding white">
+<section class="white small-padding">
   <div class="container">
-    <h3 class="text-center">Synopsis</h3>
+    <h2 class="text-center">Synopsis</h2>
     <p>{{ page.synopsis }}</p>
   </div>
 </section>
 {% endif %}
 
-<section class="default-padding">
+<section class="small-padding">
   <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <h3 class="text-center">Selena's character</h3>
-        <h5 class="text-center">{{ page.fullname }}{% if page.guest %} <span class="label label-primary">Guest</span>{% endif %}</h5>
-        <dl class="dl-horizontal">
-          {% if page.altname %}
-            <dt>Nickname(s)</dt>
-            <dd>{{ page.altname }}</dd>
-          {% endif %}
+    <h2 class="text-center">Selena’s character(s)</h2>
+    <div class="col-sm-8 col-sm-offset-2">
+      {% for i in page.characters %}
+        <div class="well well-sm">
+          <div class="row">
+            <div class="col-sm-3">
+              <figure>
+                <img class="img-responsive" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAADCAQAAAAT4xYKAAAADklEQVR42mNkAAJGOAEAAC0ABNxMS2YAAAAASUVORK5CYII=" data-src="{{ site.baseurl }}/assets/uploads/characters/filmography-character-{{ page.slug }}-{{ forloop.index }}.jpg" width="300" height="450" alt="Selena as {{ i.fullname }}">
+              </figure>
+            </div>
+            <div class="col-sm-9">
+              {% if page.role == 'guest' %} <span class="label label-primary pull-right">guest role</span>{% endif %}
+              <div class="caption">
+                <h4>{{ i.fullname }}</h4>
+                <dl class="dl-horizontal">
+                  {% if i.altname %}
+                    <dt>Also known as</dt>
+                    <dd>{{ i.altname }}</dd>
+                  {% endif %}
 
-          {% if page.age %}
-            <dt>Age</dt>
-            <dd>{{ page.age }} years</dd>
-          {% endif %}
+                  {% if i.age %}
+                    <dt>Age</dt>
+                    <dd>{{ i.age }} years</dd>
+                  {% endif %}
 
-          {% if page.identity %}
-            <dt>Identity</dt>
-            <dd>{{ page.identity }}</dd>
-          {% endif %}
+                  {% if i.identity %}
+                    <dt>Identity</dt>
+                    <dd>{{ i.identity }}</dd>
+                  {% endif %}
 
-          <dt>Appearance</dt>
-          <dd>Episode {{ page.appearance }}</dd>
+                  <dt>Appearance</dt>
+                  <dd>Episode {{ i.appearance }}</dd>
 
-          {% if page.relationship %}
-          <dt>Relationships</dt>
-          <dd>
-            <ul>{% for i in page.relationship %}
-              <li>{{ i }}</li>
-            {% endfor %}</ul>
-          </dd>
-          {% endif %}
-        </dl>
+    <!--
+                  {% if i.personality %}
+                    <dt>Personality</dt>
+                    <dd>{{ i.personality }}</dd>
+                  {% endif %}
 
-      </div>
-    </div>
-  </div>
-</section>
+                  {% if i.background %}
+                    <dt>Background</dt>
+                    <dd>{{ i.background }}</dd>
+                  {% endif %}
 
-<!--
-<section class="small-padding white">
-  <div class="container">
-    <div id="myTab" class="small-padding" role="tablist">
-      <ul class="nav nav-tabs" role="tablist">
-        <li class="active" role="presentation">
-          <a href="#relations" data-toggle="tab" role="tab">Relations</a>
-        </li>
-        {% if page.personality %}
-          <li role="presentation">
-            <a href="#personality" data-toggle="tab" role="tab">Personality</a>
-          </li>
-          <li role="presentation">
-            <a href="#background" data-toggle="tab" role="tab">Background</a>
-          </li>
-          <li role="presentation">
-            <a href="#happenings" data-toggle="tab" role="tab">Happenings</a>
-          </li>
-        {% endif %}
-      </ul>
-
-      <div class="tab-content">
-        <div id="relations" class="tab-pane active" role="tabpanel">
-
+                  {% if i.happenings %}
+                    <dt>Happenings</dt>
+                    <dd>{{ i.happenings }}</dd>
+                  {% endif %}
+    -->
+                </dl>
+              </div>
+            </div>
+          </div>
         </div>
-      {% if page.personality %}
-        <div id="personality" class="tab-pane" role="tabpanel">{{ page.personality }}</div>
-        <div id="background" class="tab-pane" role="tabpanel">{{ page.background }}</div>
-        <div id="happenings" class="tab-pane" role="tabpanel">{{ page.happenings }}</div>
-      {% endif %}
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
--->
