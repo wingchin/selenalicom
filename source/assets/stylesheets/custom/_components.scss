@@ -81,11 +81,8 @@
 */
 .btn {
   font-family: $headings-font-family;
-  font-size: $font-size-small + 1;
   text-transform: uppercase;
   letter-spacing: 2px;
-  padding: 16px 21px 16px 24px;
-  border-radius: 2px;
   border-width: 2px;
   transition: all .3s ease-in-out;
 
@@ -159,18 +156,12 @@
 
 ==============================
 */
+dl {
+  margin-bottom: 0;
+}
+
 .dl-horizontal {
-  dt, dd {
-    padding: 8px 0 4px;
-    font-size: $font-size-base - 2;
-    line-height: 30px;
-  }
-
-  dd {
-    border-bottom: 1px solid #dfdfdf;
-
-    &:last-of-type { border: none; }
-  }
+  dt { width: 140px; }
 }
 
 @media(min-width: $screen-sm-min) {
@@ -178,4 +169,28 @@
     dt { text-align: left; }
     dd { margin-left: 0; }
   }
+}
+
+
+/*
+==============================
+
+  WELLS
+
+==============================
+*/
+.well {
+  padding: 0;
+  box-shadow: 0 5px #dfdfdf;
+  border: none;
+}
+.well-lg {
+  .caption { padding: 20px; }
+  .dl-horizontal { margin-top: 25px; }
+}
+.well-sm {
+  font-size: $font-size-base - 2;
+  margin: 25px auto;
+
+  .caption { padding: 10px; }
 }
