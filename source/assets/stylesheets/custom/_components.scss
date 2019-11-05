@@ -109,7 +109,6 @@
   margin-bottom: 0;
   font-family: $headings-font-family;
 
-
   li {
     font-size: $font-size-small + 1;
     font-weight: 700;
@@ -121,6 +120,8 @@
 
     a.active { color: $brand-primary; }
   }
+
+  > li { display: inline; }
 }
 
 
