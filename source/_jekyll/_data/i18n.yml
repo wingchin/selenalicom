@@ -1,0 +1,59 @@
+# =============================================
+# Language metadata
+# =============================================
+
+websitetitle:
+  en: Selena Lee Official website
+  zh: 李施嬅官方網站
+filmography:
+  title:
+    en: Filmography
+    zh: 演出作品
+  subtitle:
+    en: Television dramas and movies
+    zh: 電視劇和電影
+home:
+  en: Home
+  zh: 主頁
+selenalees:
+  en: 'Selena Lee’s '
+  zh: 李施嬅的
+fanclubs:
+  en: 'Fan Club’s'
+  zh: 粉絲會的
+sinaweibo:
+  en: Sina Weibo
+  zh: 新浪微博
+tencentweibo:
+  en: Tencent Weibo
+  zh: 騰訊微博
+broadcast:
+  en: Broadcast date
+  zh: 播出日期
+genre:
+  en: Genre(s)
+  zh: 類型
+running:
+  en: Running time
+  zh: 集数
+starring:
+  en: Starring
+  zh: 領銜主演
+producer:
+  en: Produced by
+  zh: 監製
+synopsis:
+  en: Synopsis
+  zh: 故事大綱
+character:
+  en: Selena’s character(s)
+  zh: 李施嬅的角色
+altname:
+  en: Also known as
+  zh: 也被稱為
+identity:
+  en: Identity
+  zh: 身分識別
+appearance:
+  en: Episode appearance
+  zh: 出現集数

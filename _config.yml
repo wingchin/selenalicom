@@ -41,22 +41,23 @@ defaults:
     values:
       layout:           base
   - scope:
-      type:             beauty
+      path:             'en'
     values:
-      layout:           post-beauty
+      language:         en
   - scope:
-      type:             filmography
+      path:             'zh'
     values:
+      language:         zh
+  - scope:
+      path:             'en/filmography'
+    values:
+      type:             filmography
       layout:           post-filmography
   - scope:
-      type:             schedule
+      path:             'zh/filmography'
     values:
-      layout:           post-schedule
-      script:           maps
-  - scope:
-      type:             press
-    values:
-      layout:           post-press
+      type:             filmography
+      layout:           post-filmography
 
 plugins:
   - jekyll-sitemap
@@ -67,8 +68,6 @@ plugins:
 # =============================================
 
 # General
-title:            Selena Lee Official Website
-url:              http://selena-lee.com
 since:            2006
 
 # Accounts

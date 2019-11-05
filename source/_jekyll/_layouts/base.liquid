@@ -43,7 +43,7 @@
               <span class="sr-only">Toggle navigation</span>
               <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand" href="{{ "/" | relative_url }}">
+            <a class="navbar-brand" href="{{ site.baseurl }}/{{ page.language }}">
               <img src="{{ site.baseurl }}/assets/images/logo2.png" alt="{{ site.title }}">
             </a>
           </div>
@@ -51,7 +51,8 @@
           <!-- Nav links -->
           <div class="collapse navbar-collapse navbar-right" id="navbar-collapse">
             <ul class="nav navbar-nav">
-              {% assign menuitems = site.pages | sort: 'nav' %}
+              {% assign menuitems = site.pages | sort: 'nav' | where: 'language', page.language %}
+
               {% for i in menuitems %}
                 {% if i.nav %}
                 <li{% if page.url == i.url %} class="active"{% endif %}>
@@ -74,15 +75,10 @@
     <section id="masthead"{% if page.full %} class="full"{% endif %}>
       <div class="inner">
         <div class="container">
-          {% if page.collection %}
-            {% for i in site.pages %}
-              {% assign slugtitle = i.title | slugify %}
-              {% if page.collection == slugtitle %}
-                <h1>{{ i.title }}</h1>
-                <span class="line"></span>
-                <p>{{ i.subtitle }}</p>
-              {% endif %}
-            {% endfor %}
+          {% if page.type %}
+            <h1>{{ site.data.i18n[page.type].title[page.language] }}</h1>
+            <span class="line"></span>
+            <p>{{ site.data.i18n[page.type].subtitle[page.language] }}</p>
           {% else %}
             <h1>{{ page.title }}</h1>
             <span class="line"></span>
@@ -103,8 +99,8 @@
     <section class="white">
       <div class="container">
         <ol class="breadcrumb">
-          <li><a href="{{ site.baseurl }}/">Home</a></li>
-          {% if page.layout != 'base' %}<li><a href="{{ site.baseurl }}/{{ page.collection }}">{{ page.collection | capitalize }}</a></li>{% endif %}
+          <li><a href="{{ site.baseurl }}/{{ page.language }}">{{ site.data.i18n.home[page.language] }}</a></li>
+          {% if page.layout != 'base' %}<li><a href="{{ site.baseurl }}/{{ page.language }}/{{ page.type }}">{{ site.data.i18n[page.type].title[page.language] }}</a></li>{% endif %}
           <li class="active">{{ page.title }}</li>
         </ol>
       </div>
@@ -125,7 +121,7 @@
       <div class="container">
         <div class="row">
           <div class="copyright col-sm-7">
-            <p>&copy; {{ site.since }}-{{ 'now' | date: "%Y" }} <a href="{{ site.url }}">{{ site.title }}</a>.</p>
+            <p>&copy; {{ site.since }}-{{ 'now' | date: "%Y" }} <a href="{{ site.baseurl }}/{{ page.language }}">{{ site.data.i18n.websitetitle[page.language] }}</a></p>
           </div>
           <div class="social-media col-sm-5">
             {% include social-media.liquid %}
