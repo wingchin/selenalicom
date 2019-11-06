@@ -57,9 +57,18 @@ character:
 altname:
   en: Also known as
   zh: 也被稱為
+age:
+  en: Age
+  zh: 年齡
+years:
+  en: ' years'
+  zh: 歲
 identity:
   en: Identity
   zh: 身分識別
 appearance:
   en: Episode appearance
   zh: 出現集数
+guest:
+  en: guest role
+  zh: 客串演出

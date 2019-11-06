@@ -59,7 +59,7 @@ layout: base
               </figure>
             </div>
             <div class="col-sm-9">
-              {% if page.role == 'guest' %} <span class="label label-primary pull-right">guest role</span>{% endif %}
+              {% if page.role == 'guest' %} <span class="label label-primary pull-right">{{ site.data.i18n.guest[page.language] }}</span>{% endif %}
               <div class="caption">
                 <h4>{{ character.fullname }}</h4>
                 <dl class="dl-horizontal">
@@ -70,7 +70,7 @@ layout: base
 
                   {% if character.age %}
                     <dt>{{ site.data.i18n.age[page.language] }}</dt>
-                    <dd>{{ character.age }} years</dd>
+                    <dd>{{ character.age }}{{ site.data.i18n.years[page.language] }}</dd>
                   {% endif %}
 
                   {% if character.identity %}
