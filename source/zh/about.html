@@ -27,20 +27,7 @@ menu:       1
     <h4 class="text-center">她的職業生涯</h4>
 
     <div class="timeline">
-      {% for milestone in site.data.timeline[page.language] %}
-      <div class="timeline-block">
-        <div class="timeline-img round">
-          <img class="img-responsive" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="{{ site.baseurl }}/assets/uploads/about-timeline-{{ forloop.index0 }}.jpg" width="86" height="86" alt="{{ milestone.title }}">
-        </div>
-        <div class="timeline-content">
-          <p>{{ milestone.description }}</p>
-          <div class="cd-info">
-            <h6>{{ milestone.time }}</h6>
-            <div class="biz-title">{{ milestone.subtime }}</div>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
+      {% include loop-timeline.liquid %}
     </div>
 
   </div>
