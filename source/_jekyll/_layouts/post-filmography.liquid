@@ -8,7 +8,7 @@ layout: base
         <div class="row">
           <div class="col-sm-4">
             <figure>
-              <img class="img-responsive" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAADCAQAAAAT4xYKAAAADklEQVR42mNkAAJGOAEAAC0ABNxMS2YAAAAASUVORK5CYII=" data-src="{{ site.baseurl }}/assets/uploads/posters/{{ page.slug }}.jpg" width="300" height="450" alt="{{ i.title }} poster">
+              <img class="img-responsive" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAADCAQAAAAT4xYKAAAADklEQVR42mNkAAJGOAEAAC0ABNxMS2YAAAAASUVORK5CYII=" data-src="{{ site.baseurl }}/assets/uploads/posters/{{ page.slug }}.jpg" width="300" height="450" alt="{{ page.title }} poster">
             </figure>
           </div>
 
@@ -50,51 +50,51 @@ layout: base
   <div class="container">
     <h2 class="text-center">{{ site.data.i18n.character[page.language] }}</h2>
     <div class="col-sm-8 col-sm-offset-2">
-      {% for i in page.characters %}
+      {% for character in page.characters %}
         <div class="well well-sm">
           <div class="row">
             <div class="col-sm-3">
               <figure>
-                <img class="img-responsive" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAADCAQAAAAT4xYKAAAADklEQVR42mNkAAJGOAEAAC0ABNxMS2YAAAAASUVORK5CYII=" data-src="{{ site.baseurl }}/assets/uploads/characters/{{ page.slug }}-{{ forloop.index }}.jpg" width="300" height="450" alt="Selena as {{ i.fullname }}">
+                <img class="img-responsive" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAADCAQAAAAT4xYKAAAADklEQVR42mNkAAJGOAEAAC0ABNxMS2YAAAAASUVORK5CYII=" data-src="{{ site.baseurl }}/assets/uploads/characters/{{ page.slug }}-{{ forloop.index }}.jpg" width="300" height="450" alt="Selena as {{ character.fullname }}">
               </figure>
             </div>
             <div class="col-sm-9">
               {% if page.role == 'guest' %} <span class="label label-primary pull-right">guest role</span>{% endif %}
               <div class="caption">
-                <h4>{{ i.fullname }}</h4>
+                <h4>{{ character.fullname }}</h4>
                 <dl class="dl-horizontal">
-                  {% if i.altname %}
+                  {% if character.altname %}
                     <dt>{{ site.data.i18n.altname[page.language] }}</dt>
-                    <dd>{{ i.altname }}</dd>
+                    <dd>{{ character.altname }}</dd>
                   {% endif %}
 
-                  {% if i.age %}
+                  {% if character.age %}
                     <dt>{{ site.data.i18n.age[page.language] }}</dt>
-                    <dd>{{ i.age }} years</dd>
+                    <dd>{{ character.age }} years</dd>
                   {% endif %}
 
-                  {% if i.identity %}
+                  {% if character.identity %}
                     <dt>{{ site.data.i18n.identity[page.language] }}</dt>
-                    <dd>{{ i.identity }}</dd>
+                    <dd>{{ character.identity }}</dd>
                   {% endif %}
 
                   <dt>{{ site.data.i18n.appearance[page.language] }}</dt>
-                  <dd>{{ i.appearance }}</dd>
+                  <dd>{{ character.appearance }}</dd>
 
     <!--
-                  {% if i.personality %}
+                  {% if character.personality %}
                     <dt>Personality</dt>
-                    <dd>{{ i.personality }}</dd>
+                    <dd>{{ character.personality }}</dd>
                   {% endif %}
 
-                  {% if i.background %}
+                  {% if character.background %}
                     <dt>Background</dt>
-                    <dd>{{ i.background }}</dd>
+                    <dd>{{ character.background }}</dd>
                   {% endif %}
 
-                  {% if i.happenings %}
+                  {% if character.happenings %}
                     <dt>Happenings</dt>
-                    <dd>{{ i.happenings }}</dd>
+                    <dd>{{ character.happenings }}</dd>
                   {% endif %}
     -->
                 </dl>
