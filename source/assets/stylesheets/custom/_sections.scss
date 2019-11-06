@@ -27,7 +27,7 @@
   h1 {
     display: inline-block;
     font-size: $font-size-large - 5;
-    color: fade($grayish, 75%);
+    color: opacify($grayish, .75);
   }
   p {
     font-size: $font-size-base - 2;
@@ -35,7 +35,7 @@
     text-transform: uppercase;
     margin: 0 0 0 3px;
     font-weight: 700;
-    color: fade($grayish, 75%);
+    color: opacify($grayish, .75);
   }
   .line {
     margin: 8px auto 18px;
