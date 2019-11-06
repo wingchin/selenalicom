@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.language }}">
 
   <!-- Head
   =================================== -->
@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>
-      {% unless page.slug == 'home' %}{{ page.title }} &middot; {% endunless %}{{ site.title }}
+      {% unless page.slug == 'home' %}{{ page.title }} &middot; {% endunless %}{{ site.data.i18n.websitetitle[page.language] }}
     </title>
 
     {% if page.style %}
