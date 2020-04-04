@@ -18,6 +18,6 @@ role:           lead
 characters:
   -
     fullname:       Man Ga-Hei
-    identity:       Senior Forensic
-    appearance:
+    identity:       Senior Forensic doctor
+    appearance:     1-30
 ---
