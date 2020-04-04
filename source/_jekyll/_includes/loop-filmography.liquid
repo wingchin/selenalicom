@@ -2,9 +2,9 @@
 {% assign num = include.limit %}
 
 {% for drama in dramas limit:num %}
-<div class="item col-xs-6 col-sm-3">
-  <figure class="thumbnail">
-    <div class="item">
+<div class="col-6 col-sm-3">
+  <figure class="card">
+    <div class="card-img-wrap">
       <div class="hover">
         <a href="{{ drama.url }}">
           <span class="block text-center">
@@ -12,11 +12,11 @@
           </span>
         </a>
       </div>
-      <img class="img-responsive" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAADCAQAAAAT4xYKAAAADklEQVR42mNkAAJGOAEAAC0ABNxMS2YAAAAASUVORK5CYII=" data-src="{{ site.baseurl }}/assets/uploads/posters/{{ drama.slug }}.jpg" width="300" height="450" alt="{{ drama.title }} poster">
+      <img class="card-img-top" src="{{ site.baseurl }}/assets/uploads/posters/{{ drama.slug }}.jpg" alt="{{ drama.title }} poster">
     </div>
-    <figcaption class="caption">
-      <h4><a href="{{ drama.url }}">{{ drama.title }}</a></h4>
-      <p>{% for character in drama.characters %}{{ character.fullname }}{% if forloop.last == false %}, {% endif%}{% endfor %}</p>
+    <figcaption class="card-body">
+      <h5 class="card-title"><a href="{{ drama.url }}">{{ drama.title }}</a></h5>
+      <p class="card-text">{% for character in drama.characters %}{{ character.fullname }}{% if forloop.last == false %}, {% endif%}{% endfor %}</p>
     </figcaption>
   </figure>
 </div>

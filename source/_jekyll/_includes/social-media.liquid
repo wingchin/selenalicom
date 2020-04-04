@@ -1,36 +1,36 @@
 <ul class="list-inline">
 {% if include.account  == 'fanclub' %}
   {% assign name = site.data.i18n.fanclubs[page.language] %}
-  <li>
+  <li class="list-inline-item">
     <a href="http://twitter.com/{{ site.fanclub.twitter }}" title="{{ name }}Twitter"><i class="fa fa-twitter"></i></a>
   </li>
-  <li>
+  <li class="list-inline-item">
     <a href="http://instagram.com/{{ site.fanclub.instagram }}" title="{{ name }}Instagram"><i class="fa fa-instagram"></i></a>
   </li>
-  <li>
+  <li class="list-inline-item">
     <a href="http://vimeo.com/{{ site.fanclub.vimeo }}" title="{{ name }}Vimeo"><i class="fa fa-vimeo-square"></i></a>
   </li>
-  <li>
+  <li class="list-inline-item">
     <a href="http://www.weibo.com/{{ site.fanclub.weibo }}" title="{{ name }}{{ site.data.i18n.sinaweibo[page.language] }}"><i class="fa fa-weibo"></i></a>
   </li>
-  <li>
+  <li class="list-inline-item">
     <a href="http://t.qq.com/{{ site.fanclub.tencent }}" title="{{ name }}{{ site.data.i18n.tencentweibo[page.language] }}"><i class="fa fa-tencent-weibo"></i></a>
   </li>
 {% else %}
   {% assign name = site.data.i18n.selenalees[page.language] %}
-  <li>
+  <li class="list-inline-item">
     <a href="http://facebook.com/{{ site.selena.facebook }}" title="{{ name }}Facebook"><i class="fa fa-facebook"></i></a>
   </li>
-  <li>
+  <li class="list-inline-item">
     <a href="http://instagram.com/{{ site.selena.instagram }}" title="{{ name }}Instagram"><i class="fa fa-instagram"></i></a>
   </li>
-  <li>
+  <li class="list-inline-item">
     <a href="http://youtube.com/user/{{ site.selena.youtube }}" title="{{ name }}YouTube"><i class="fa fa-youtube"></i></a>
   </li>
-  <li>
+  <li class="list-inline-item">
     <a href="http://www.weibo.com/u/{{ site.selena.weibo }}" title="{{ name }}{{ site.data.i18n.sinaweibo[page.language] }}"><i class="fa fa-weibo"></i></a>
   </li>
-  <li>
+  <li class="list-inline-item">
     <a href="http://t.qq.com/{{ site.selena.tencent }}" title="{{ name }}{{ site.data.i18n.tencentweibo[page.language] }}"><i class="fa fa-tencent-weibo"></i></a>
   </li>
 {% endif %}
