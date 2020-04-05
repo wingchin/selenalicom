@@ -71,7 +71,7 @@
             <div class="col-12 align-self-start"></div>
           {% endif %}
           <div class="col-12 align-self-center">
-            {% if page.type %}
+            {% if page.type != 'pages' %}
               <h1>{{ site.data.i18n[page.type].title[page.language] }}</h1>
               <p class="lead">{{ site.data.i18n[page.type].subtitle[page.language] }}</p>
             {% else %}
@@ -104,7 +104,7 @@
               <li class="breadcrumb-item">
                 <a href="{{ site.baseurl }}/{{ page.language }}">{{ site.data.i18n.home[page.language] }}</a>
               </li>
-              {% if page.type %}
+              {% if page.type != 'pages' %}
                 <li class="breadcrumb-item">
                   <a href="{{ site.baseurl }}/{{ page.language }}/{{ page.type }}">{{ site.data.i18n[page.type].title[page.language] }}</a>
                 </li>

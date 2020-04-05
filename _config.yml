@@ -34,8 +34,8 @@ permalink:              pretty
 defaults:
   - scope:
       path:             ''
-      type:             pages
     values:
+      type:             pages
       layout:           base
   - scope:
       path:             'en'
