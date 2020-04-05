@@ -24,7 +24,7 @@ menu:       1
 <section id="timeline" class="py-5">
   <div class="container">
     <h3 class="text-center">Her career</h3>
-    <div class="timeline">
+    <div class="timeline py-4">
       {% include loop-timeline.liquid %}
     </div>
   </div>

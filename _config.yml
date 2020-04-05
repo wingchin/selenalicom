@@ -9,34 +9,31 @@ layouts_dir:            _jekyll/_layouts
 includes_dir:           _jekyll/_includes
 data_dir:               _jekyll/_data
 plugins_dir:            _jekyll/_plugins
-
 sass:
-  sass_dir:             assets/stylesheets
   style:                compressed
-
 collections:
-  beauty:
-    output:             true
   filmography:
     output:             true
-  schedule:
-    output:             false
-  press:
-    output:             false
 
 # Handling reading
 strict_front_matter:    true
+
+# Plugins
+plugins:
+  - jekyll-sitemap
 
 # Conversion
 markdown:               kramdown
 
 # Custom metadata
+url:                    'https://selena.netlify.com'
 baseurl:                ''
 
 # Outputting
 permalink:              pretty
 defaults:
   - scope:
+      path:             ''
       type:             pages
     values:
       layout:           base
@@ -59,14 +56,13 @@ defaults:
       type:             filmography
       layout:           post-filmography
 
-plugins:
-  - jekyll-sitemap
-
+# Markdown Processors
+kramdown:
+  auto_ids:             false
 
 # =============================================
 # Site metadata
 # =============================================
-
 # General
 since:            2006
 
