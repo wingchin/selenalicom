@@ -18,7 +18,7 @@
     <!-- Header
     =================================== -->
     <header>
-      <nav class="navbar navbar-expand-sm navbar-light fixed-top">
+      <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
         <div class="container">
 
           <a class="navbar-brand" href="{{ site.baseurl }}/{{ page.language }}">
@@ -29,7 +29,7 @@
           </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">🌎 {{ site.data.i18n[page.language][page.language] }}</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -64,7 +64,10 @@
     <section id="masthead"{% if page.full %} class="full"{% endif %}>
       <div class="container">
         <div class="row">
-          <div class="col align-self-center">
+          {% if page.slug == 'home' %}
+            <div class="col-12 align-self-start"></div>
+          {% endif %}
+          <div class="col-12 align-self-center">
             {% if page.type %}
               <h1>{{ site.data.i18n[page.type].title[page.language] }}</h1>
               <p class="lead">{{ site.data.i18n[page.type].subtitle[page.language] }}</p>
@@ -73,13 +76,13 @@
               <p class="lead">{{ page.subtitle }}</p>
             {% endif %}
           </div>
-          <div class="col align-self-end">
-            {% if page.slug == 'home' %}
+          {% if page.slug == 'home' %}
+            <div class="col-12 align-self-end text-center">
               <a href="#main" class="btn-scroll">
                 <i class="fa fa-angle-down animated"></i>
               </a>
-            {% endif %}
-          </div>
+            </div>
+          {% endif %}
         </div>
       </div>
     </section>
