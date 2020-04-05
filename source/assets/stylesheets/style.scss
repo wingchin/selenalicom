@@ -177,13 +177,13 @@ mark {
 ==============================
 */
 .grid-area {
-  h4 { font-size: $font-size-base; }
   p {
     font-size: $font-size-small;
     letter-spacing: 1px;
     text-transform: uppercase;
   }
   i { padding-right: 3px; }
+  h4 { font-size: $font-size-h6; }
 
   .card {
     transition: background .3s ease-in-out;
@@ -261,7 +261,7 @@ mark {
 ==============================
 */
 .btn-scroll {
-  font-size: 30px;
+  font-size: $font-size-large;
 
   i.animated { animation: pulse ease-in-out .3s infinite; }
 }
@@ -345,14 +345,13 @@ mark {
     border-right: 10px solid white;
   }
 
-  h6 { margin-bottom: 3px; }
+  h4 {
+    margin-bottom: 3px;
+    font-size: $font-size-h6;
+  }
   p { font-size: $font-size-base - 2; }
 
-  .biz-title {
-    font-style: italic;
-    color: #818181;
-  }
-  .cd-info {
+  .time {
     display: inline-block;
     float: left;
     padding: 0;
@@ -382,9 +381,7 @@ mark {
         border-color: transparent;
         border-right-color: white;
       }
-
-      .cd-read-more { float: right; }
-      .cd-info {
+      .time {
         left: auto;
         right: 130%;
         text-align: right;
@@ -420,7 +417,7 @@ mark {
       border-left-color: white;
     }
 
-    .cd-info {
+    .time {
       position: absolute;
       width: 100%;
       left: 130%;
@@ -467,6 +464,10 @@ mark {
 
 #intro .lead {
   font-size: $font-size-h2;
+
+  @media screen and (max-width: 575px) {
+    font-size: $font-size-h4;
+  }
 }
 
 /*

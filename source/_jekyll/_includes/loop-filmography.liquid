@@ -15,7 +15,7 @@
       <img class="card-img-top" src="{{ site.baseurl }}/assets/uploads/posters/{{ drama.slug }}.jpg" alt="{{ drama.title }} poster">
     </div>
     <figcaption class="card-body">
-      <h5 class="card-title"><a href="{{ drama.url }}">{{ drama.title }}</a></h5>
+      <h4 class="card-title"><a href="{{ drama.url }}">{{ drama.title }}</a></h4>
       <p class="card-text">{% for character in drama.characters %}{{ character.fullname }}{% if forloop.last == false %}, {% endif%}{% endfor %}</p>
     </figcaption>
   </figure>
