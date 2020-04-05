@@ -22,7 +22,7 @@
         <div class="container">
 
           <a class="navbar-brand" href="{{ site.baseurl }}/{{ page.language }}">
-            <img src="{{ site.baseurl }}/assets/images/logo2.png" width="120" height="30" alt="{{ site.title }}">
+            <img src="{{ site.baseurl }}/assets/images/logo-diap.png" width="120" height="30" alt="{{ site.title }}">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -62,22 +62,26 @@
     <!-- Masthead
     =================================== -->
     <section id="masthead"{% if page.full %} class="full"{% endif %}>
-      <div class="inner">
-        <div class="container">
-          {% if page.type %}
-            <h1>{{ site.data.i18n[page.type].title[page.language] }}</h1>
-            <p class="lead">{{ site.data.i18n[page.type].subtitle[page.language] }}</p>
-          {% else %}
-            <h1>{{ page.title }}</h1>
-            <p class="lead">{{ page.subtitle }}</p>
-          {% endif %}
+      <div class="container">
+        <div class="row">
+          <div class="col align-self-center">
+            {% if page.type %}
+              <h1>{{ site.data.i18n[page.type].title[page.language] }}</h1>
+              <p class="lead">{{ site.data.i18n[page.type].subtitle[page.language] }}</p>
+            {% else %}
+              <h1>{{ page.title }}</h1>
+              <p class="lead">{{ page.subtitle }}</p>
+            {% endif %}
+          </div>
+          <div class="col align-self-end">
+            {% if page.slug == 'home' %}
+              <a href="#main" class="btn-scroll">
+                <i class="fa fa-angle-down animated"></i>
+              </a>
+            {% endif %}
+          </div>
         </div>
       </div>
-      {% if page.slug == 'home' %}
-        <a href="#main" class="btn-scroll">
-          <i class="fa fa-angle-down animated"></i>
-        </a>
-      {% endif %}
     </section>
 
     <!-- Content
