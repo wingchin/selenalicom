@@ -5,7 +5,7 @@
 /*-----------------------------------------------------------------------------------*/
 
 // Custom fonts
-@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Nunito:300,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Nunito:400,700&display=swap');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
 
 /*-----------------------------------------------------------------------------------*/
@@ -17,15 +17,15 @@ $grayish: #645e60;
 $base-font-family: 'Nunito', Helvetica, Arial, sans-serif;
 $headings-font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 
-$font-size-base: 16px;
-$font-size-large: 48px;
-$font-size-small: 11px;
-$font-size-h1: 32px;
-$font-size-h2: 28px;
-$font-size-h3: 28px;
-$font-size-h4: 24px;
-$font-size-h5: 20px;
-$font-size-h6: 18px;
+$font-size-base: 1rem;
+$font-size-large: 3rem;
+$font-size-small: 0.75rem;
+$font-size-h1: 2rem;
+$font-size-h2: 1.75rem;
+$font-size-h3: 1.5rem;
+$font-size-h4: 1.25rem;
+$font-size-h5: 1.125rem;
+$font-size-h6: $font-size-base;
 
 /*-----------------------------------------------------------------------------------*/
 /* RE-USABLE CLASSES AND MIXINS
@@ -92,7 +92,7 @@ mark {
 }
 .nav-link, .dropdown-item {
   @extend .headings-font;
-  font-size: $font-size-small + 1;
+  font-size: $font-size-small;
 }
 .top-nav-collapse {
   padding: .5rem 1rem;
@@ -128,10 +128,8 @@ mark {
 ==============================
 */
 .btn {
-  font-family: $headings-font-family;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  border-width: 2px;
+  @extend .headings-font;
+  font-size: ($font-size-base - .2rem);
   transition: all .3s ease-in-out;
 }
 .btn-primary {
@@ -155,12 +153,10 @@ mark {
 .breadcrumb {
   background-color: transparent;
   margin-bottom: 0;
-  font-family: $headings-font-family;
 
   li {
-    font-size: $font-size-small + 1;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    @extend .headings-font;
+    font-size: $font-size-small;
 
     &.active { color: $brand-primary; }
   }
@@ -177,12 +173,6 @@ mark {
 ==============================
 */
 .grid-area {
-  p {
-    font-size: $font-size-small;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-  i { padding-right: 3px; }
   h4 { font-size: $font-size-h6; }
 
   .card {
@@ -243,7 +233,6 @@ mark {
     left: 0;
     transform: translateY(-50%);
     -webkit-backface-visibility: hidden;
-    padding: 0 15px;
 
     i {
       color: white;
@@ -280,7 +269,6 @@ mark {
 */
 .timeline {
   position: relative;
-  padding: 35px 0;
 
   &::before {
     /* this is the vertical line */
@@ -295,7 +283,7 @@ mark {
 }
 .timeline-block {
   position: relative;
-  margin: 20px 0;
+  margin: 1.5rem 0;
   *zoom: 1;
 
   &:before, &:after {
@@ -349,7 +337,6 @@ mark {
     margin-bottom: 3px;
     font-size: $font-size-h6;
   }
-  p { font-size: $font-size-base - 2; }
 
   .time {
     display: inline-block;
@@ -366,7 +353,7 @@ mark {
     }
   }
   .timeline-block {
-    margin: 40px 0;
+    margin: 2rem 0;
 
     &:first-child { margin-top: 0; }
     &:last-child { margin-bottom: 0; }
@@ -436,16 +423,13 @@ mark {
 */
 #masthead {
   background: black url('../images/header.jpg') no-repeat center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   color: white;
 
   .row { height: 50vh; }
   &.full .row { height: 100vh; }
 
-  h1 { font-size: $font-size-large - 8; }
+  h1 { font-size: $font-size-large; }
 
   .btn-scroll { color: white; }
 }
@@ -541,7 +525,7 @@ footer {
     @extend .headings-font;
   }
 
-  form label {
-    text-align: right;
+  @media screen and (min-width: 575px) {
+    form label { text-align: right; }
   }
 }
