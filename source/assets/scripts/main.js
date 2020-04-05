@@ -23,19 +23,21 @@ $(document).ready(function() {
 // jQuery to collapse the navbar on scroll
 $(window).scroll(function() {
   if ($('.navbar').offset().top > 50) {
-    $('.fixed-top').addClass('top-nav-collapse');
+    $('.fixed-top').addClass('top-nav-collapse navbar-light').removeClass('navbar-dark');
     $('.navbar-brand img').attr('src', '/assets/images/logo.png');
   } else {
-    $('.fixed-top').removeClass('top-nav-collapse');
+    $('.fixed-top').removeClass('top-nav-collapse navbar-light').addClass('navbar-dark');
     $('.navbar-brand img').attr('src', '/assets/images/logo-diap.png');
   }
 });
 
 $('.navbar-toggler:visible').click(function() {
   if($('.navbar-collapse:visible').length) {
-    $('.fixed-top').removeClass('top-nav-collapse');
+    $('.fixed-top').removeClass('top-nav-collapse navbar-light').addClass('navbar-dark');
+    $('.navbar-brand img').attr('src', '/assets/images/logo-diap.png');
   } else {
-    $('.fixed-top').addClass('top-nav-collapse');
+    $('.fixed-top').addClass('top-nav-collapse navbar-light').removeClass('navbar-dark');
+    $('.navbar-brand img').attr('src', '/assets/images/logo.png');
   }
 });
 
