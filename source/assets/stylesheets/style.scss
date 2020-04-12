@@ -429,7 +429,13 @@ mark {
   .row { height: 50vh; }
   &.full .row { height: 100vh; }
 
-  h1 { font-size: $font-size-large; }
+  h1 {
+    font-size: $font-size-large;
+
+    @media screen and (max-width: 567px) {
+      font-size: ($font-size-large - .5rem);
+    }
+  }
 
   .btn-scroll { color: white; }
 }
