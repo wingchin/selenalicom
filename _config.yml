@@ -11,9 +11,6 @@ data_dir:               _jekyll/_data
 plugins_dir:            _jekyll/_plugins
 sass:
   style:                compressed
-collections:
-  filmography:
-    output:             true
 
 # Handling reading
 strict_front_matter:    true
@@ -37,6 +34,7 @@ defaults:
     values:
       type:             pages
       layout:           base
+
   - scope:
       path:             'en'
     values:
@@ -45,6 +43,7 @@ defaults:
       path:             'zh'
     values:
       language:         zh
+
   - scope:
       path:             'en/filmography'
     values:
