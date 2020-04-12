@@ -10,10 +10,19 @@
     <meta name="author" content="Created by Wing">
     <meta name="generator" content="Jekyll v{{ jekyll.version }}">
 
-    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/stylesheets/style.css">
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:description" content="{{ page.site.data.i18n.site.description[page.language] }}" />
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
 
     <title>{% unless page.slug == 'home' %}{{ page.title }} &middot; {% endunless %}{{ site.data.i18n.websitetitle[page.language] }}</title>
+
+    <meta name="google-site-verification" content="obVOs0JSLonE6P6RwQ0ZoZfFEZ8XIp4RVDWB8yaS9fk" />
+
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/stylesheets/style.css">
+
+    <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">
   </head>
 
   <body>
@@ -143,12 +152,11 @@
       <i class="fa fa-angle-up"></i>
     </a>
 
-
     <!-- Foot
     =================================== -->
     <script src="//code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="{{ site.baseurl }}/assets/scripts/main.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -160,6 +168,5 @@
 
       gtag('config', '{{ site.analytics }}');
     </script>
-
   </body>
 </html>
