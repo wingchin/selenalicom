@@ -4,35 +4,26 @@ layout: base
 <article class="py-5">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-sm-10">
-
-        <div class="card">
-          <div class="row no-gutters">
-            <div class="col-sm-4">
-              <img class="card-img img-fluid" src="{{ site.baseurl }}/assets/uploads/posters/{{ page.slug }}.jpg" width="300" height="450" alt="{{ page.title }} poster">
-            </div>
-            <div class="col-sm-8">
-              <div class="card-body">
-                <h1 class="card-title">{{ page.title }}</h1>
-                <p class="card-text">{{ page.names.chinese }}</p>
-
-                <dl class="dl-horizontal">
-                  {% unless page.unreleased %}<dt>{{ site.data.i18n.broadcast[page.language] }}</dt>
-                  <dd>{% if page.language == 'zh' %}{{ page.broadcast.start | date: "%Y年%m月%d日" }} - {{ page.broadcast.end | date: "%Y年%m月%d日" }}{% else %}{{ page.broadcast.start | date: "%B %e, %Y" }} - {{ page.broadcast.end | date: "%B %e, %Y" }}{% endif %}</dd>{% endunless %}
-                  <dt>{{ site.data.i18n.genre[page.language] }}</dt>
-                  <dd>{{ page.genre | capitalize }}</dd>
-                  <dt>{{ site.data.i18n.running[page.language] }}</dt>
-                  <dd>{{ page.episodes }}</dd>
-                  <dt>{{ site.data.i18n.starring[page.language] }}</dt>
-                  <dd>{{ page.starring }}</dd>
-                  <dt>{{ site.data.i18n.producer[page.language] }}</dt>
-                  <dd>{{ page.producer }}</dd>
-                </dl>
-              </div>
-            </div>
-          </div>
+      <div class="col-xl-4 col-lg-4">
+        <img class="card-img img-fluid" src="{{ site.baseurl }}/assets/uploads/posters/{{ page.slug }}.jpg" width="300" height="450" alt="{{ page.title }} poster">
+      </div>
+      <div class="col-xl-6 col-lg-8">
+        <div class="card-body pl-2">
+          <h1 class="card-title">{{ page.title }}</h1>
+          <p class="card-text">{% if page.language == 'zh' %}{{ page.names.english }}{% else %}{{ page.names.chinese }}{% endif %}</p>
+          <dl>
+            {% unless page.unreleased %}<dt>{{ site.data.i18n.broadcast[page.language] }}</dt>
+            <dd>{% if page.language == 'zh' %}{{ page.broadcast.start | date: "%Y年%m月%d日" }} - {{ page.broadcast.end | date: "%Y年%m月%d日" }}{% else %}{{ page.broadcast.start | date: "%B %e, %Y" }} - {{ page.broadcast.end | date: "%B %e, %Y" }}{% endif %}</dd>{% endunless %}
+            <dt>{{ site.data.i18n.genre[page.language] }}</dt>
+            <dd>{{ page.genre | capitalize }}</dd>
+            <dt>{{ site.data.i18n.running[page.language] }}</dt>
+            <dd>{{ page.episodes }}</dd>
+            <dt>{{ site.data.i18n.starring[page.language] }}</dt>
+            <dd>{{ page.starring }}</dd>
+            <dt>{{ site.data.i18n.producer[page.language] }}</dt>
+            <dd>{{ page.producer }}</dd>
+          </dl>
         </div>
-
       </div>
     </div>
   </div>
@@ -51,35 +42,35 @@ layout: base
   <div class="container">
     <h2 class="text-center mb-4">{{ site.data.i18n.character[page.language] }}</h2>
     <div class="row justify-content-center">
-        <div class="col-sm-8">
+        <div class="col-xl-6 col-lg-8 col-md-10">
         {% for character in page.characters %}
           <div class="card mb-4">
             <div class="row no-gutters">
-              <div class="col-sm-3">
+              <div class="col-sm-4">
                 <img class="card-img" src="{{ site.baseurl }}/assets/uploads/characters/{{ page.slug }}-{{ forloop.index }}.jpg" alt="Selena as {{ character.fullname }}">
               </div>
-              <div class="col-sm-9">
+              <div class="col-sm-8">
                 <div class="card-body">
                 {% if page.role == 'guest' %} <span class="badge badge-primary float-right">{{ site.data.i18n.guest[page.language] }}</span>{% endif %}
                   <h4 class="card-title">{{ character.fullname }}</h4>
-                  <dl class="row">
+                  <dl>
                     {% if character.altname %}
-                      <dt class="col-sm-4">{{ site.data.i18n.altname[page.language] }}</dt>
-                      <dd class="col-sm-8">{{ character.altname }}</dd>
+                      <dt>{{ site.data.i18n.altname[page.language] }}</dt>
+                      <dd>{{ character.altname }}</dd>
                     {% endif %}
-
+<!--
                     {% if character.age %}
-                      <dt class="col-sm-4">{{ site.data.i18n.age[page.language] }}</dt>
-                      <dd class="col-sm-8">{{ character.age }}{{ site.data.i18n.years[page.language] }}</dd>
+                      <dt>{{ site.data.i18n.age[page.language] }}</dt>
+                      <dd>{{ character.age }}{{ site.data.i18n.years[page.language] }}</dd>
                     {% endif %}
-
+-->
                     {% if character.identity %}
-                      <dt class="col-sm-4">{{ site.data.i18n.identity[page.language] }}</dt>
-                      <dd class="col-sm-8">{{ character.identity }}</dd>
+                      <dt>{{ site.data.i18n.identity[page.language] }}</dt>
+                      <dd>{{ character.identity }}</dd>
                     {% endif %}
 
-                    <dt class="col-sm-4">{{ site.data.i18n.appearance[page.language] }}</dt>
-                    <dd class="col-sm-8">{{ character.appearance }}</dd>
+                    <dt>{{ site.data.i18n.appearance[page.language] }}</dt>
+                    <dd>{{ character.appearance }}</dd>
 
       <!--
                     {% if character.personality %}
