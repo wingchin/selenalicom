@@ -25,5 +25,5 @@ characters:
     fullname:   Yeung Yuk-Wah (Coco)
     age:
     identity:   Dancer at Twilight Mansion Ballroom
-    appearance: 1-20
+    appearance: 9-20
 ---

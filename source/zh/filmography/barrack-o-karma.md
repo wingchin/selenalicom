@@ -28,5 +28,5 @@ characters:
     fullname:   楊玉華（Coco）
     age:
     identity:   金宵舞廳大班
-    appearance: 1-20
+    appearance: 9-20
 ---
